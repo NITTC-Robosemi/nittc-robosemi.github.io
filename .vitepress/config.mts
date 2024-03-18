@@ -10,6 +10,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/website/assets/TJUJ9115.PNG' }]
   ],
   cleanUrls: true,
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/TJUJ9115.PNG',

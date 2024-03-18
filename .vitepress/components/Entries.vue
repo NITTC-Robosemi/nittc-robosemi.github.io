@@ -2,7 +2,7 @@
 // ????????
 // @ts-expect-error
 import { data } from '../scripts/entries.data'
-import { getPublishedAt, getTitle } from '../scripts/get-from-entry';
+import { getTitle } from '../scripts/get-from-entry';
 import { withBase } from 'vitepress';
 const entries = [...data].reverse();
 </script>
@@ -13,7 +13,6 @@ const entries = [...data].reverse();
       <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail" />
       <div class="bottom">
         <span>{{ getTitle(entry) }}</span>
-        <time>{{ getPublishedAt(entry.frontmatter) }}</time>
       </div>
     </a>
   </div>

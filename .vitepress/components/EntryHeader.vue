@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useData, withBase } from 'vitepress';
-import { getPublishedAt } from '../scripts/get-from-entry';
 
 const { frontmatter } = useData();
 </script>
@@ -8,7 +7,6 @@ const { frontmatter } = useData();
 <template>
   <div class="pageHeader" :style="{ backgroundImage: `url(${withBase(frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }">
     <h1>{{ frontmatter.title }}</h1>
-    <time>{{ getPublishedAt(frontmatter) }}</time>
   </div>
 </template>
 
