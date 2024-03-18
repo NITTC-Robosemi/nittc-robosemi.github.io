@@ -7,12 +7,12 @@ export default defineConfig({
   lang: "ja",
   base: "/website/",
   head: [
-    ['link', { rel: 'icon', href: '/imgs/TJUJ9115.PNG' }]
+    ['link', { rel: 'icon', href: '/assets/TJUJ9115.PNG' }]
   ],
   cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/imgs/TJUJ9115.PNG',
+    logo: '/assets/TJUJ9115.PNG',
     search: {
       provider: 'local',
     },

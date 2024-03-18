@@ -4,7 +4,7 @@ layout: home
 
 hero:
   image:
-    src: /imgs/IMG_E2445_logo.png
+    src: /assets/IMG_E2445_logo.png
     alt: Logo
   name: "新しいアイデアを"
   text: "東京高専ロボコンゼミ"
