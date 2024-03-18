@@ -3,13 +3,14 @@
 // @ts-expect-error
 import { data } from '../scripts/entries.data'
 import { getPublishedAt, getTitle } from '../scripts/get-from-entry';
+import { withBase } from 'vitepress';
 const entries = [...data].reverse();
 </script>
 
 <template>
   <div class="entries">
-    <a v-for="entry in entries" :href="entry.url" :key="entry.path" class="entry">
-      <img v-if="entry.frontmatter.thumbnail" :src="entry.frontmatter.thumbnail" alt="thumbnail" />
+    <a v-for="entry in entries" :href="withBase(entry.url)" :key="entry.url" class="entry">
+      <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail" />
       <div class="bottom">
         <span>{{ getTitle(entry) }}</span>
         <time>{{ getPublishedAt(entry.frontmatter) }}</time>
