@@ -7,7 +7,7 @@ export default defineConfig({
   lang: "ja",
   base: "/website/",
   head: [
-    ['link', { rel: 'icon', href: '/assets/TJUJ9115.PNG' }]
+    ['link', { rel: 'icon', href: '/website/assets/TJUJ9115.PNG' }]
   ],
   cleanUrls: true,
   themeConfig: {
