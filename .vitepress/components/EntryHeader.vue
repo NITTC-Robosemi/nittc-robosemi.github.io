@@ -6,7 +6,7 @@ const { frontmatter } = useData();
 </script>
 
 <template>
-  <div class="pageHeader" :style="{ backgroundImage: `url(${withBase(frontmatter.thumbnail) ?? '/assets/CPAL5629.PNG'})` }">
+  <div class="pageHeader" :style="{ backgroundImage: `url(${withBase(frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }">
     <h1>{{ frontmatter.title }}</h1>
     <time>{{ getPublishedAt(frontmatter) }}</time>
   </div>

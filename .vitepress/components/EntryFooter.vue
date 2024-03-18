@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, ComputedRef } from 'vue';
-import { ContentData, useRoute } from 'vitepress';
+import { ContentData, useRoute, withBase } from 'vitepress';
 // @ts-expect-error
 import { data } from '../scripts/entries.data'
 import { getTitle } from '../scripts/get-from-entry';
@@ -13,8 +13,8 @@ const next = computed(() => entries.value[index.value + 1]);
 
 <template>
   <div class="pageFooter">
-    <a :href="prev.url" v-if="prev" class="prev">< {{ getTitle(prev) }}</a>
-    <a :href="next.url" v-if="next" class="next">{{ getTitle(next) }} ></a>
+    <a :href="withBase(prev.url)" v-if="prev" class="prev">< {{ getTitle(prev) }}</a>
+    <a :href="withBase(next.url)" v-if="next" class="next">{{ getTitle(next) }} ></a>
   </div>
 </template>
 
