@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: ホーム
+title: ""
 hero:
   image:
     src: /assets/IMG_E2445_logo.png
