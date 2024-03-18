@@ -5,6 +5,7 @@ export default defineConfig({
   title: "東京高専ロボコンゼミ",
   description: "東京高専ロボコンゼミの公式ウェブサイトです。",
   lang: "ja",
+  base: "/website/",
   head: [
     ['link', { rel: 'icon', href: '/imgs/TJUJ9115.PNG' }]
   ],
