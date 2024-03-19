@@ -18,7 +18,7 @@ const { frontmatter } = useData();
   justify-content: center;
   gap: 10px;
   margin-bottom: 50px;
-  aspect-ratio: 16/5;
+  height: 200px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
