@@ -6,7 +6,7 @@ import { data } from '../scripts/entries.data'
 import { getTitle } from '../scripts/get-from-entry';
 const entries: ComputedRef<ContentData[]> = computed(() => [...data]);
 const { path } = useRoute();
-const index = computed(() => entries.value.findIndex((entry: ContentData) => entry.url === path));
+const index = computed(() => entries.value.findIndex((entry: ContentData) => withBase(entry.url) === path));
 const prev = computed(() => entries.value[index.value - 1]);
 const next = computed(() => entries.value[index.value + 1]);
 </script>
