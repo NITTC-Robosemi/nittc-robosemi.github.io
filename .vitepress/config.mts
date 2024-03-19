@@ -9,11 +9,14 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/website/assets/TJUJ9115.PNG' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' }],
-    ['meta', { property: 'og:title', content: '東京高専ロボコンゼミ' }],
-    ['meta', { property: 'og:description', content: '東京高専ロボコンゼミの公式ウェブサイトです。' }],
-    ['meta', { property: 'og:image', content: '/website/assets/TJUJ9115.PNG' }],
-    ['meta', { property: 'og:url', content: 'https://nittc-robo.github.io/website/' }],
   ],
+  async transformHead(context) {
+    return [
+      ["meta", { property: "og:title", content: context.pageData.title }],
+      ["meta", { property: "og:description", content: context.pageData.description ?? '東京高専ロボコンゼミの公式ウェブサイトです。'}],
+      ["meta", { property: "og:image", content: context.pageData.frontmatter.thumbnail ?? '/website/assets/TJUJ9115.PNG' }],
+    ];
+  },
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {

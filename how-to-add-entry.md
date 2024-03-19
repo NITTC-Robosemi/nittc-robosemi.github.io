@@ -9,12 +9,14 @@
 - frontmatter(記事上部の`---`で囲まれた部分)には以下の情報を記述することで記事をカスタマイズ可能。
   - title: 記事のタイトル(記述がなかった場合は記事中の最初の大見出しがタイトルになる)
   - thumbnail: サムネイル画像のURL
+  - description: 記事の説明(SNSの共有リンクなどに表示される)
 - 画像が必要な場合は/entries/assets下に追加すること。ファイル名は任意。
 
 ## 記事の例
 ```markdown
 ---
 title: hoge
+description: fugafugafuga
 thumbnail: /entries/assets/2024-01-01-thumbnail.jpg
 ---
 
