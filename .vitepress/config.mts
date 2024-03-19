@@ -10,6 +10,8 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/website/assets/TJUJ9115.PNG' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' }],
     ['meta', { property: "og:image", content: "https://nittc-robosemi.github.io/website/assets/TJUJ9115.PNG" }],
+    ['meta', { property: "og:title", content: "東京高専ロボコンゼミ" }],
+    ['meta', { property: "og:description", content: "東京高専ロボコンゼミの公式ウェブサイトです。" }],
   ],
   async transformHead(context) {
     return [
