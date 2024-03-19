@@ -136,3 +136,11 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+/**
+ * Others
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-font-family-base: "Inter var", "Noto Sans JP", sans-serif;
+}
