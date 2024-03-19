@@ -54,9 +54,9 @@
   --vp-c-brand-3: #8a4305;
   --vp-c-brand-soft: #ff790433;
 
-  --vp-c-tip-1: var(--vp-indigo-green-1);
-  --vp-c-tip-2: var(--vp-indigo-green-2);
-  --vp-c-tip-3: var(--vp-indigo-green-3);
+  --vp-c-tip-1: var(--vp-c-indigo-1);
+  --vp-c-tip-2: var(--vp-c-indigo-2);
+  --vp-c-tip-3: var(--vp-c-indigo-3);
   --vp-c-tip-soft: var(--vp-c-indigo-soft);
 
   --vp-c-warning-1: var(--vp-c-yellow-1);
