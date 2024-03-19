@@ -9,6 +9,23 @@ hero:
   name: "新しいアイデアを"
   text: "東京高専ロボコンゼミ"
   tagline: NHK高専ロボコンの全国大会出場を目指し、ロボット制作や技術開発をしている学生主体の団体です。
+features:
+  - title: "設計"
+    icon:
+      src: "/assets/IQZQ9738.PNG"
+    details: "3DCADを用いた設計"
+  - title: "加工"
+    icon:
+      src: "/assets/BXDE2645.PNG"
+    details: "本体の加工・組立"
+  - title: "回路"
+    icon:
+      src: "/assets/AKGB0504.PNG"
+    details: "電子回路の設計・製作"
+  - title: "制御"
+    icon:
+      src: "/assets/VVAG0578.PNG"
+    details: "マイコンを用いた制御"
 ---
 
 ## ロボコンゼミの活動の目指すもの
