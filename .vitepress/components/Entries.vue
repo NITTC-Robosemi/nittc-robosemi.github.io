@@ -2,9 +2,9 @@
 // ????????
 // @ts-expect-error
 import { data } from '../scripts/entries.data'
-import { getTitle } from '../scripts/get-from-entry';
-import { withBase } from 'vitepress';
-const entries = [...data].reverse();
+import {getDescription, getTitle} from '../scripts/get-from-entry';
+import {ContentData, withBase} from 'vitepress';
+const entries: ContentData[] = [...data].reverse();
 </script>
 
 <template>
@@ -12,7 +12,8 @@ const entries = [...data].reverse();
     <a v-for="entry in entries" :href="withBase(entry.url)" :key="entry.url" class="entry">
       <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail" />
       <div class="bottom">
-        <span>{{ getTitle(entry) }}</span>
+        <span class="title">{{ getTitle(entry) }}</span>
+        <span v-if="getDescription(entry)" class="description">{{ getDescription(entry) }}</span>
       </div>
     </a>
   </div>
@@ -40,6 +41,8 @@ const entries = [...data].reverse();
 .entry>.bottom {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .entry:hover {
@@ -53,14 +56,14 @@ const entries = [...data].reverse();
   border-radius: 5px;
 }
 
-.entry>.bottom span {
+.entry>.bottom .title {
   color: var(--vp-c-text-1);
   font-size: 1.2em;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.entry>.bottom time {
+.entry>.bottom .description {
   color: var(--vp-c-text-2);
 }
 </style>
