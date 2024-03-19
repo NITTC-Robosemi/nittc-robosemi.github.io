@@ -9,11 +9,12 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/website/assets/TJUJ9115.PNG' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' }],
+    ['meta', { property: "og:image", content: "https://nittc-robosemi.github.io/website/assets/TJUJ9115.PNG" }],
   ],
   async transformHead(context) {
     return [
-      ["meta", { property: "og:title", content: context.pageData.title }],
-      ["meta", { property: "og:description", content: context.pageData.description ?? '東京高専ロボコンゼミの公式ウェブサイトです。'}],
+      ['meta', { property: "og:title", content: context.pageData.title }],
+      ['meta', { property: "og:description", content: context.pageData.description }],
     ];
   },
   cleanUrls: true,
