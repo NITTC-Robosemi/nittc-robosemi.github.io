@@ -118,6 +118,18 @@
   }
 }
 
+.VPHomeFeatures .box {
+  position: relative;
+}
+
+.VPHomeFeatures .box>.VPImage {
+  position: absolute;
+  right: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto !important;
+}
+
 /**
  * Component: Custom Block
  * -------------------------------------------------------------------------- */
