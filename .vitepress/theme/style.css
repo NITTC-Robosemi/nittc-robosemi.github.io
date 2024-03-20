@@ -123,7 +123,7 @@
 }
 
 .VPHomeFeatures .box > .details {
-  z-index: 9999;
+  z-index: 1;
 }
 
 .VPHomeFeatures .box > .VPImage {
