@@ -43,7 +43,7 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -122,11 +122,11 @@
   position: relative;
 }
 
-.VPHomeFeatures .box>.details {
+.VPHomeFeatures .box > .details {
   z-index: 9999;
 }
 
-.VPHomeFeatures .box>.VPImage {
+.VPHomeFeatures .box > .VPImage {
   position: absolute;
   opacity: 0.5;
   right: 24px;
@@ -163,6 +163,6 @@
 }
 
 ::selection {
-    background-color: var(--vp-c-brand-1);
-    color: var(--vp-c-white);
+  background-color: var(--vp-c-brand-1);
+  color: var(--vp-c-white);
 }

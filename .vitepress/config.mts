@@ -8,7 +8,10 @@ export default defineConfig({
   base: "/website/",
   head: [
     ['link', { rel: 'icon', href: '/website/assets/TJUJ9115.PNG' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' }],
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap'
+    }],
     ['meta', { property: "og:image", content: "https://nittc-robosemi.github.io/website/assets/TJUJ9115.PNG" }],
     ['meta', { property: "og:title", content: "東京高専ロボコンゼミ" }],
     ['meta', { property: "og:description", content: "東京高専ロボコンゼミの公式ウェブサイトです。" }],
@@ -33,7 +36,10 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: '/entries' },
-      { text: 'Contact', link: 'https://docs.google.com/forms/d/e/1FAIpQLScytDGcUURyp-uLLH25fj-WHMRDKrZNKTvx9yoTLjcVEeAT_w/viewform' },
+      {
+        text: 'Contact',
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLScytDGcUURyp-uLLH25fj-WHMRDKrZNKTvx9yoTLjcVEeAT_w/viewform'
+      },
     ],
     socialLinks: [
       { icon: 'x', link: 'https://x.com/nittc_robo' },

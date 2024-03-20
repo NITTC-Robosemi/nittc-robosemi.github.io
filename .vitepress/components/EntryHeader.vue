@@ -5,7 +5,8 @@ const { frontmatter } = useData();
 </script>
 
 <template>
-  <div class="pageHeader" :style="{ backgroundImage: `url(${withBase(frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }">
+  <div :style="{ backgroundImage: `url(${withBase(frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
+       class="pageHeader">
     <h1>{{ frontmatter.title }}</h1>
   </div>
 </template>
@@ -24,11 +25,12 @@ const { frontmatter } = useData();
   border-radius: 10px;
 }
 
-.pageHeader>* {
+.pageHeader > * {
   filter: drop-shadow(0 0 10px var(--vp-c-black));
   color: var(--vp-c-white);
 }
-.pageHeader>h1 {
+
+.pageHeader > h1 {
   font-weight: bold;
   font-size: 2em;
 }

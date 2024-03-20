@@ -2,15 +2,16 @@
 // ????????
 // @ts-expect-error
 import { data } from '../scripts/entries.data'
-import {getDescription, getTitle} from '../scripts/get-from-entry';
-import {ContentData, withBase} from 'vitepress';
+import { getDescription, getTitle } from '../scripts/get-from-entry';
+import { ContentData, withBase } from 'vitepress';
+
 const entries: ContentData[] = [...data].reverse();
 </script>
 
 <template>
   <div class="entries">
-    <a v-for="entry in entries" :href="withBase(entry.url)" :key="entry.url" class="entry">
-      <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail" />
+    <a v-for="entry in entries" :key="entry.url" :href="withBase(entry.url)" class="entry">
+      <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail"/>
       <div class="bottom">
         <span class="title">{{ getTitle(entry) }}</span>
         <span v-if="getDescription(entry)" class="description">{{ getDescription(entry) }}</span>
@@ -38,7 +39,7 @@ const entries: ContentData[] = [...data].reverse();
   transition: border-color 0.3s !important;
 }
 
-.entry>.bottom {
+.entry > .bottom {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -49,21 +50,22 @@ const entries: ContentData[] = [...data].reverse();
   border-color: var(--vp-c-brand-2);
 }
 
-.entry>img {
+.entry > img {
   aspect-ratio: 16/5;
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
 
-.entry>.bottom .title {
+.entry > .bottom .title {
   color: var(--vp-c-text-1);
   font-size: 1.2em;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.entry>.bottom .description {
+
+.entry > .bottom .description {
   color: var(--vp-c-text-2);
 }
 </style>

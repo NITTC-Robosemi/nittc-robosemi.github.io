@@ -1,6 +1,6 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import { useData, type Theme } from 'vitepress'
+import { type Theme, useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import EntryHeader from '../components/EntryHeader.vue'
