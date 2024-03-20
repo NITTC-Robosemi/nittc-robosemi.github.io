@@ -122,8 +122,13 @@
   position: relative;
 }
 
+.VPHomeFeatures .box>.details {
+  z-index: 9999;
+}
+
 .VPHomeFeatures .box>.VPImage {
   position: absolute;
+  opacity: 0.5;
   right: 24px;
   top: 0;
   bottom: 0;
@@ -155,4 +160,9 @@
 
 :root {
   --vp-font-family-base: "Inter var", "Noto Sans JP", sans-serif;
+}
+
+::selection {
+    background-color: var(--vp-c-brand-1);
+    color: var(--vp-c-white);
 }
