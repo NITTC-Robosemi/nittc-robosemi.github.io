@@ -21,21 +21,30 @@ const next = computed(() => entries[index.value + 1]);
 
 <style>
 .pageFooter {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
+}
+
+@media screen and (max-width: 640px){
+  .pageFooter {
+    flex-direction: column;
+  }
 }
 
 .pageFooter * {
   display: block;
-  position: absolute;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   padding: 11px 16px 13px;
   transition: border-color .25s, color .25s, transform .25s;
-  width: 45%;
   line-height: 20px;
   font-size: 14px;
   font-weight: 500;
   color: var(--vp-c-brand-1);
+  width: 100%;
 }
 
 .pageFooter *:hover {
@@ -43,7 +52,6 @@ const next = computed(() => entries[index.value + 1]);
 }
 
 .pageFooter .prev {
-  left: 0;
   text-align: left;
 }
 
@@ -59,7 +67,6 @@ const next = computed(() => entries[index.value + 1]);
 }
 
 .pageFooter .next {
-  right: 0;
   text-align: right;
 }
 
