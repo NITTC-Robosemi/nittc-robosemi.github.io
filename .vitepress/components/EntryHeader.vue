@@ -1,13 +1,17 @@
 <script lang="ts" setup>
-import { useData, withBase } from 'vitepress';
+import { useRoute, withBase } from 'vitepress';
+import { getEntry } from "../scripts/get-entry";
+import { getTitle } from "../scripts/get-from-entry";
+import { computed } from "vue";
 
-const { frontmatter } = useData();
+const route = useRoute();
+const entry = computed(() => getEntry(route.path));
 </script>
 
 <template>
-  <div :style="{ backgroundImage: `url(${withBase(frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
+  <div :style="{ backgroundImage: `url(${withBase(entry.frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
        class="pageHeader">
-    <h1>{{ frontmatter.title }}</h1>
+    <h1>{{ getTitle(entry) }}</h1>
   </div>
 </template>
 

@@ -4,10 +4,11 @@ import { ContentData, useRoute, withBase } from 'vitepress';
 // @ts-expect-error
 import { data } from '../scripts/entries.data'
 import { getTitle } from '../scripts/get-from-entry';
+import { getEntryIndex } from "../scripts/get-entry";
 
 const entries: ContentData[] = [...data];
 const route = useRoute();
-const index = computed(() => entries.findIndex((entry) => withBase(entry.url) === route.path));
+const index = computed(() => getEntryIndex(route.path));
 const prev = computed(() => entries[index.value - 1]);
 const next = computed(() => entries[index.value + 1]);
 </script>
