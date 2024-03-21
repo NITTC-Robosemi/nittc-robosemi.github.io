@@ -1,12 +1,11 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { ContentData, useRoute, withBase } from 'vitepress';
-// @ts-expect-error
-import { data } from '../scripts/entries.data'
+import { useRoute, withBase } from 'vitepress';
+import { data } from '../scripts/entries.data.js'
 import { getTitle } from '../scripts/get-from-entry';
 import { getEntryIndex } from "../scripts/get-entry";
 
-const entries: ContentData[] = [...data];
+const entries = [...data];
 const route = useRoute();
 const index = computed(() => getEntryIndex(route.path));
 const prev = computed(() => entries[index.value - 1]);

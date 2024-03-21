@@ -1,8 +1,7 @@
-// @ts-expect-error
-import { data } from './entries.data'
-import { ContentData, withBase } from "vitepress";
+import { data } from './entries.data.js'
+import { withBase } from "vitepress";
 
-const entries: ContentData[] = [...data];
+const entries = [...data];
 export function getEntry(path: string) {
   return entries.find((entry) => withBase(entry.url) === path);
 }

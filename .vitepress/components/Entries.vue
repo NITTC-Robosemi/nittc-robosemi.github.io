@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-// ????????
-// @ts-expect-error
-import { data } from '../scripts/entries.data'
+import { data } from '../scripts/entries.data.js'
 import { getDescription, getTitle } from '../scripts/get-from-entry';
-import { ContentData, withBase } from 'vitepress';
+import { withBase } from 'vitepress';
 
-const entries: ContentData[] = [...data].reverse();
+const entries = [...data].reverse();
 </script>
 
 <template>
