@@ -1,5 +1,6 @@
 ---
 layout: doc
+lastUpdated: false
 ---
 
 <script lang="ts" setup>
