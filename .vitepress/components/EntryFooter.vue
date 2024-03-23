@@ -28,7 +28,7 @@ const next = computed(() => entries[index.value + 1]);
   padding-top: 24px;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px) {
   .pageFooter {
     flex-direction: column;
   }

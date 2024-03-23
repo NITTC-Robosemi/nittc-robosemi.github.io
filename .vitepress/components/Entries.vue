@@ -19,7 +19,8 @@ const entriesToShow = ref(entries.slice(0, size));
         <span v-if="getDescription(entry)" class="description">{{ getDescription(entry) }}</span>
       </div>
     </a>
-    <VPButton class="load-more" v-if="entriesToShow.length < entries.length" @click="entriesToShow = entries.slice(0, entriesToShow.length + size)" theme="alt" text="もっと見る" />
+    <VPButton v-if="entriesToShow.length < entries.length" class="load-more"
+              text="もっと見る" theme="alt" @click="entriesToShow = entries.slice(0, entriesToShow.length + size)"/>
   </div>
 </template>
 
