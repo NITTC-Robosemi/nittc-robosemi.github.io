@@ -2,19 +2,24 @@
 import { data } from '../scripts/entries.data.js'
 import { getDescription, getTitle } from '../scripts/get-from-entry';
 import { withBase } from 'vitepress';
+import { ref } from "vue";
+import { VPButton } from 'vitepress/theme';
 
+const size = 20;
 const entries = [...data].reverse();
+const entriesToShow = ref(entries.slice(0, size));
 </script>
 
 <template>
   <div class="entries">
-    <a v-for="entry in entries" :key="entry.url" :href="withBase(entry.url)" class="entry">
+    <a v-for="entry in entriesToShow" :key="entry.url" :href="withBase(entry.url)" class="entry">
       <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail"/>
       <div class="bottom">
         <span class="title">{{ getTitle(entry) }}</span>
         <span v-if="getDescription(entry)" class="description">{{ getDescription(entry) }}</span>
       </div>
     </a>
+    <VPButton class="load-more" v-if="entriesToShow.length < entries.length" @click="entriesToShow = entries.slice(0, entriesToShow.length + size)" theme="alt" text="もっと見る" />
   </div>
 </template>
 
