@@ -49,7 +49,7 @@ const entries = [...data].reverse();
 }
 
 .entry > img {
-  aspect-ratio: 16/5;
+  max-height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
