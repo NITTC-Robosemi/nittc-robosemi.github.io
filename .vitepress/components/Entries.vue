@@ -11,20 +11,20 @@ const entriesToShow = ref(entries.slice(0, size));
 </script>
 
 <template>
-  <div class="entries">
-    <a v-for="entry in entriesToShow" :key="entry.url" :href="withBase(entry.url)" class="entry">
+  <div :class="$style.entries">
+    <a v-for="entry in entriesToShow" :key="entry.url" :href="withBase(entry.url)" :class="$style.entry">
       <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail"/>
-      <div class="bottom">
-        <span class="title">{{ getTitle(entry) }}</span>
-        <span v-if="getDescription(entry)" class="description">{{ getDescription(entry) }}</span>
+      <div :class="$style.bottom">
+        <span :class="$style.title">{{ getTitle(entry) }}</span>
+        <span v-if="getDescription(entry)" :class="$style.description">{{ getDescription(entry) }}</span>
       </div>
     </a>
-    <VPButton v-if="entriesToShow.length < entries.length" class="load-more"
+    <VPButton v-if="entriesToShow.length < entries.length"
               text="もっと見る" theme="alt" @click="entriesToShow = entries.slice(0, entriesToShow.length + size)"/>
   </div>
 </template>
 
-<style>
+<style module>
 .entries {
   display: flex;
   flex-direction: column;

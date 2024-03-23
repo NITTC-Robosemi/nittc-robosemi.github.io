@@ -10,12 +10,12 @@ const entry = computed(() => getEntry(route.path));
 
 <template>
   <div :style="{ backgroundImage: `url(${withBase(entry.frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
-       class="pageHeader">
+       :class="$style.pageHeader">
     <h1>{{ getTitle(entry) }}</h1>
   </div>
 </template>
 
-<style>
+<style module>
 .pageHeader {
   display: flex;
   flex-direction: column;

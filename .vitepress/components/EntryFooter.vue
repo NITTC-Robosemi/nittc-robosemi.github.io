@@ -13,13 +13,13 @@ const next = computed(() => entries[index.value + 1]);
 </script>
 
 <template>
-  <div class="pageFooter">
-    <a v-if="prev" :href="withBase(prev.url)" class="prev"> {{ getTitle(prev) }}</a>
-    <a v-if="next" :href="withBase(next.url)" class="next">{{ getTitle(next) }} </a>
+  <div :class="$style.pageFooter">
+    <a v-if="prev" :href="withBase(prev.url)" :class="$style.prev"> {{ getTitle(prev) }}</a>
+    <a v-if="next" :href="withBase(next.url)" :class="$style.next">{{ getTitle(next) }} </a>
   </div>
 </template>
 
-<style>
+<style module>
 .pageFooter {
   display: flex;
   justify-content: space-between;
