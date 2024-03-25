@@ -38,9 +38,9 @@ const entriesToShow = ref(entries.slice(0, size));
   border-radius: 10px;
   text-decoration: none !important;
   background-color: var(--vp-c-gray-soft);
-  border: 2px solid var(--vp-c-gray-1);
+  border: 1px solid transparent;
   padding: 20px;
-  transition: border-color 0.3s !important;
+  transition: border-color 0.25s !important;
 }
 
 .entry > .bottom {
@@ -51,7 +51,7 @@ const entriesToShow = ref(entries.slice(0, size));
 }
 
 .entry:hover {
-  border-color: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-1);
 }
 
 .entry > img {
