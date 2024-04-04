@@ -28,6 +28,11 @@ features:
     details: "マイコンを用いた制御"
 ---
 
+<script lang="ts" setup>
+import EntriesCarousel from "/.vitepress/components/EntriesCarousel.vue";
+</script>
+<EntriesCarousel />
+
 ## ロボコンゼミの活動の目指すもの
 - 課題を整理し解決方法を示す能力の獲得
 - 物理法則等の基礎学力に基づいたアイディアの提言能力の獲得
