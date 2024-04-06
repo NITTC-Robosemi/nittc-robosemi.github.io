@@ -47,9 +47,11 @@ export default defineConfig({
     footer: {
       copyright: "© 2024- 東京高専ロボコンゼミ",
     },
-  }
   },
   srcExclude: [
     "how-to-add-entry.md",
   ],
+  sitemap: {
+    hostname: "https://nittc-robosemi.github.io",
+  },
 })
