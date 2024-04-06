@@ -11,7 +11,7 @@
   - thumbnail: サムネイル画像のURL(記事一覧などでリンク切れを起こすため相対リンクではなく絶対リンクを使用すること！)
   - description: 記事の説明(SNSの共有リンクなどに表示される)
   - displayOnCarousel: トップページのカルーセルに表示するかどうか(デフォルトではtrue)
-- 画像が必要な場合は/entries/assets下に追加すること。ファイル名は任意。
+  - tags: 記事に付けるタグ(複数指定可)
 - 画像が必要な場合は/public/assets/entries下に追加すること。ファイル名は任意。
   - 画像パスは`/public`を省略して`/assets/entries/ファイル名`で指定可
 
@@ -21,6 +21,7 @@
 title: hoge
 description: fugafugafuga
 thumbnail: /entries/assets/2024-01-01-thumbnail.jpg
+tags: [hoge, fuga]
 ---
 
 # hoge

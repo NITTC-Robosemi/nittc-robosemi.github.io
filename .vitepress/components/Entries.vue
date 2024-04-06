@@ -6,12 +6,16 @@ import { ref } from "vue";
 import { VPButton } from 'vitepress/theme';
 
 const size = 20;
-const entries = [...data].reverse();
+const tag = new URLSearchParams(location.search).get('tag');
+// O(N)かかるけどまあいけるだろ！w
+const entries = [...data].reverse().filter((entry) => !tag || entry.frontmatter.tags?.includes(tag));
 const entriesToShow = ref(entries.slice(0, size));
+const title = tag ? `タグ検索: ${tag}` : '記事一覧'
 </script>
 
 <template>
-  <div :class="$style.entries">
+  <h1>{{ title }}</h1>
+  <p :class="$style.entries">
     <a v-for="entry in entriesToShow" :key="entry.url" :href="withBase(entry.url)" :class="$style.entry">
       <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail"/>
       <div :class="$style.bottom">
@@ -21,7 +25,7 @@ const entriesToShow = ref(entries.slice(0, size));
     </a>
     <VPButton v-if="entriesToShow.length < entries.length"
               text="もっと見る" theme="alt" @click="entriesToShow = entries.slice(0, entriesToShow.length + size)"/>
-  </div>
+  </p>
 </template>
 
 <style module>
