@@ -15,7 +15,7 @@ const entries = [...data].reverse().filter((entry) => entry.frontmatter.displayO
       <a :href="withBase(entry.url)" :class="$style.link">
         <div :style="{ backgroundImage: `url(${withBase(entry.frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
              :class="$style.slide">
-          <span>{{ getTitle(entry) }}</span>
+          <span class="h1Like">{{ getTitle(entry) }}</span>
         </div>
       </a>
     </Slide>
@@ -52,9 +52,6 @@ const entries = [...data].reverse().filter((entry) => entry.frontmatter.displayO
 .slide > span {
   text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
   color: var(--vp-c-white);
-  font-weight: bold;
-  font-size: 2em;
-  line-height: 1.3em;
 }
 </style>
 

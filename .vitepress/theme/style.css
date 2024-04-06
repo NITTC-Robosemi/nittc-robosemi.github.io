@@ -167,3 +167,22 @@
   color: var(--vp-c-white);
   -webkit-text-fill-color: var(--vp-c-white);
 }
+
+.h1Like {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .h1Like {
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-size: 32px;
+  }
+}
+
+.vp-doc img {
+  border-radius: 12px;
+}

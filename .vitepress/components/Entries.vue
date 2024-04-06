@@ -34,20 +34,20 @@ const entriesToShow = ref(entries.slice(0, size));
 .entry {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   border-radius: 10px;
   text-decoration: none !important;
   background-color: var(--vp-c-gray-soft);
   border: 1px solid transparent;
-  padding: 20px;
   transition: border-color 0.25s !important;
+  overflow: hidden;
 }
 
 .entry > .bottom {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 10px;
+  margin: 15px;
+  gap: 5px;
 }
 
 .entry:hover {
@@ -55,10 +55,10 @@ const entriesToShow = ref(entries.slice(0, size));
 }
 
 .entry > img {
-  max-height: 200px;
+  max-height: 150px;
   width: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
 .entry > .bottom .title {
@@ -70,6 +70,11 @@ const entriesToShow = ref(entries.slice(0, size));
 }
 
 .entry > .bottom .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   color: var(--vp-c-text-2);
 }
 </style>

@@ -11,7 +11,7 @@ const entry = computed(() => getEntry(route.path));
 <template>
   <div :style="{ backgroundImage: `url(${withBase(entry.frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
        :class="$style.pageHeader">
-    <span>{{ getTitle(entry) }}</span>
+    <span class="h1Like">{{ getTitle(entry) }}</span>
   </div>
 </template>
 
@@ -27,14 +27,12 @@ const entry = computed(() => getEntry(route.path));
   height: 200px;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .pageHeader > span {
   text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
   color: var(--vp-c-white);
-  font-weight: bold;
-  font-size: 2em;
-  line-height: 1.3em;
+  text-align: center;
 }
 </style>
