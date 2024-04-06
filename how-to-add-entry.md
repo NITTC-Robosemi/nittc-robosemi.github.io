@@ -12,6 +12,8 @@
   - description: 記事の説明(SNSの共有リンクなどに表示される)
   - displayOnCarousel: トップページのカルーセルに表示するかどうか(デフォルトではtrue)
 - 画像が必要な場合は/entries/assets下に追加すること。ファイル名は任意。
+- 画像が必要な場合は/public/assets/entries下に追加すること。ファイル名は任意。
+  - 画像パスは`/public`を省略して`/assets/entries/ファイル名`で指定可
 
 ## 記事の例
 ```markdown
