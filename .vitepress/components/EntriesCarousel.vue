@@ -41,6 +41,7 @@ const entries = [...data].reverse().filter((entry) => entry.frontmatter.displayO
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  padding: 0 40px;
   gap: 10px;
   height: 300px;
   background-size: cover;
@@ -49,11 +50,11 @@ const entries = [...data].reverse().filter((entry) => entry.frontmatter.displayO
 }
 
 .slide > span {
+  text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
+  color: var(--vp-c-white);
   font-weight: bold;
   font-size: 2em;
-  filter: drop-shadow(0 0 10px var(--vp-c-black));
-  color: var(--vp-c-white);
-  margin-left: 50px;
+  line-height: 1.3em;
 }
 </style>
 
