@@ -48,4 +48,8 @@ export default defineConfig({
       copyright: "© 2024- 東京高専ロボコンゼミ",
     },
   }
+  },
+  srcExclude: [
+    "how-to-add-entry.md",
+  ],
 })
