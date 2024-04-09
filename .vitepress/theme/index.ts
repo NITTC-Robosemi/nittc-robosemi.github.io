@@ -1,6 +1,6 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import { type Theme, useData } from 'vitepress'
+import { type Theme, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import EntryHeader from '../components/EntryHeader.vue'
@@ -12,14 +12,14 @@ export default {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'doc-before': () => {
-        const page = useData();
-        if (page.page.value.relativePath.startsWith('entries/')) {
+        const route = useRoute();
+        if (route.path.startsWith('/entries/')) {
           return h(EntryHeader);
         }
       },
       'doc-after': () => {
-        const page = useData();
-        if (page.page.value.relativePath.startsWith('entries/')) {
+        const route = useRoute();
+        if (route.path.startsWith('/entries/')) {
           return h(EntryFooter);
         }
       },
