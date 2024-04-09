@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { data } from '../scripts/entries.data.js'
-import { getDescription, getTitle } from '../scripts/get-from-entry';
+import { getDescription, getTags, getThumbnail, getTitle } from '../scripts/get-from-entry';
 import { withBase } from 'vitepress';
 import { ref } from "vue";
 import { VPButton } from 'vitepress/theme';
@@ -8,7 +8,7 @@ import { VPButton } from 'vitepress/theme';
 const size = 20;
 const tag = new URLSearchParams(location.search).get('tag');
 // O(N)かかるけどまあいけるだろ！w
-const entries = [...data].reverse().filter((entry) => !tag || entry.frontmatter.tags?.includes(tag));
+const entries = [...data].reverse().filter((entry) => !tag || getTags(entry)?.includes(tag));
 const entriesToShow = ref(entries.slice(0, size));
 const title = tag ? `タグ検索: ${tag}` : '記事一覧'
 </script>
@@ -17,7 +17,7 @@ const title = tag ? `タグ検索: ${tag}` : '記事一覧'
   <h1>{{ title }}</h1>
   <p :class="$style.entries">
     <a v-for="entry in entriesToShow" :key="entry.url" :href="withBase(entry.url)" :class="$style.entry">
-      <img v-if="entry.frontmatter.thumbnail" :src="withBase(entry.frontmatter.thumbnail)" alt="thumbnail"/>
+      <img v-if="getThumbnail(entry)" :src="getThumbnail(entry)" alt="thumbnail"/>
       <div :class="$style.bottom">
         <span :class="$style.title">{{ getTitle(entry) }}</span>
         <span v-if="getDescription(entry)" :class="$style.description">{{ getDescription(entry) }}</span>

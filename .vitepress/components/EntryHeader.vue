@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useRoute, withBase } from 'vitepress';
 import { getEntry } from "../scripts/get-entry";
-import { getTitle } from "../scripts/get-from-entry";
+import { getTags, getThumbnailOrDefault, getTitle } from "../scripts/get-from-entry";
 import { computed } from "vue";
 
 const route = useRoute();
@@ -9,12 +9,12 @@ const entry = computed(() => getEntry(route.path));
 </script>
 
 <template>
-  <div :style="{ backgroundImage: `url(${withBase(entry.frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
+  <div :style="{ backgroundImage: `url(${getThumbnailOrDefault(entry)})` }"
        :class="$style.pageHeader">
     <span class="h1Like">{{ getTitle(entry) }}</span>
   </div>
   <div :class="$style.tags">
-    <a :class="$style.tag" v-for="tag in entry.frontmatter.tags" :href="`/entries?tag=${tag}`">{{ tag }}</a>
+    <a :class="$style.tag" v-for="tag in getTags(entry)" :href="`/entries?tag=${tag}`">{{ tag }}</a>
   </div>
 </template>
 

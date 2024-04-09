@@ -4,16 +4,16 @@ import 'vue3-carousel/dist/carousel.css';
 // https://github.com/ismail9k/vue3-carousel/pull/373
 import { Carousel, Slide, Navigation } from 'vue3-carousel/dist/carousel.es.js';
 import { data } from "../scripts/entries.data.js";
-import { getTitle } from "../scripts/get-from-entry";
+import { getDisplayOnCarousel, getThumbnailOrDefault, getTitle } from "../scripts/get-from-entry";
 import { withBase } from "vitepress";
-const entries = [...data].reverse().filter((entry) => entry.frontmatter.displayOnCarousel ?? true).slice(0, 5);
+const entries = [...data].reverse().filter((entry) => getDisplayOnCarousel(entry)).slice(0, 5);
 </script>
 
 <template>
   <Carousel :autoplay="5000" :wrap-around="true" :mouse-drag="false" :class="$style.root" v-if="entries.length > 0">
     <Slide v-for="entry in entries" :key="entry.url">
       <a :href="withBase(entry.url)" :class="$style.link">
-        <div :style="{ backgroundImage: `url(${withBase(entry.frontmatter.thumbnail ?? '/assets/CPAL5629.PNG')})` }"
+        <div :style="{ backgroundImage: `url(${getThumbnailOrDefault(entry)})` }"
              :class="$style.slide">
           <span class="h1Like">{{ getTitle(entry) }}</span>
         </div>
