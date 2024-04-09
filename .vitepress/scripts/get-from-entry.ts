@@ -13,7 +13,7 @@ export function getTags(entry: ContentData): string[] {
 }
 
 export function getThumbnail(entry: ContentData): string {
-  return withBase(entry.frontmatter.thumbnail);
+  return entry.frontmatter.thumbnail ? withBase(entry.frontmatter.thumbnail) : null;
 }
 
 export function getThumbnailOrDefault(entry: ContentData): string {
