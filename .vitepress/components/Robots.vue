@@ -66,7 +66,6 @@ const robots: Robot[] = [
     createdAt: 2021,
     links: {
       "PV": "https://www.PV.com/watch?v=o-QHMa3JWDI",
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2021",
     },
   },
   {
@@ -75,9 +74,6 @@ const robots: Robot[] = [
     description: "2021NHKロボコン Bチーム",
     result: "地区大会アイデア賞受賞",
     createdAt: 2021,
-    links: {
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2021",
-    },
   },
   {
     name: "鶴翼",
@@ -85,9 +81,6 @@ const robots: Robot[] = [
     description: "2022NHKロボコン Aチーム",
     result: "地区大会ベスト5",
     createdAt: 2022,
-    links: {
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2022",
-    },
   },
   {
     name: "∞∞∞",
@@ -97,7 +90,6 @@ const robots: Robot[] = [
     createdAt: 2022,
     links: {
       "PV": "https://www.PV.com/watch?v=rUCy4x1DraI",
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2022",
     },
   },
   {
@@ -106,9 +98,6 @@ const robots: Robot[] = [
     description: "2023NHKロボコン Aチーム",
     result: "地区大会特別賞受賞",
     createdAt: 2023,
-    links: {
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2023",
-    },
   },
   {
     name: "S∅PNIR",
@@ -117,7 +106,6 @@ const robots: Robot[] = [
     result: "地区大会ベスト4・技術賞/全国大会出場",
     links: {
       "PV": "https://www.PV.com/watch?v=Fu7AD7VwOIU",
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2023",
     },
     createdAt: 2023,
   },
