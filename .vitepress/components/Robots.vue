@@ -175,6 +175,7 @@ console.log(robotsYearGrouped);
   border-radius: 10px;
   text-decoration: none;
   position: relative;
+  border: solid 1px var(--vp-c-divider);
 
   &:last-of-type {
     margin-bottom: 0;
@@ -207,7 +208,7 @@ console.log(robotsYearGrouped);
   background-color: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1) !important;
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--vp-c-divider);
   transition: border-color 0.25s;
 }
 
