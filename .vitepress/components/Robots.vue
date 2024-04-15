@@ -25,7 +25,7 @@ const robots: Robot[] = [
     result: "地区大会優勝/全国大会出場/エキシビションにて非公式全国大会最速Vゴール",
     createdAt: 2018,
     links: {
-      "PV": "https://www.PV.com/watch?v=17SvYzGcg18",
+      "PV": "https://www.youtube.com/watch?v=17SvYzGcg18",
       "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2018",
     },
   },
@@ -54,7 +54,7 @@ const robots: Robot[] = [
     result: "特別賞受賞",
     createdAt: 2020,
     links: {
-      "PV": "https://www.PV.com/watch?v=PNQ_LcuqU60",
+      "PV": "https://www.youtube.com/watch?v=PNQ_LcuqU60",
       "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2020",
     },
   },
@@ -65,7 +65,7 @@ const robots: Robot[] = [
     result: "地区大会優勝/全国大会9位",
     createdAt: 2021,
     links: {
-      "PV": "https://www.PV.com/watch?v=o-QHMa3JWDI",
+      "PV": "https://www.youtube.com/watch?v=o-QHMa3JWDI",
     },
   },
   {
@@ -89,7 +89,7 @@ const robots: Robot[] = [
     result: "地区大会準優勝/全国大会出場",
     createdAt: 2022,
     links: {
-      "PV": "https://www.PV.com/watch?v=rUCy4x1DraI",
+      "PV": "https://www.youtube.com/watch?v=rUCy4x1DraI",
     },
   },
   {
@@ -105,7 +105,7 @@ const robots: Robot[] = [
     description: "2023NHKロボコン Bチーム",
     result: "地区大会ベスト4・技術賞/全国大会出場",
     links: {
-      "PV": "https://www.PV.com/watch?v=Fu7AD7VwOIU",
+      "PV": "https://www.youtube.com/watch?v=Fu7AD7VwOIU",
     },
     createdAt: 2023,
   },
