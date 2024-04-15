@@ -109,6 +109,25 @@ const robots: Robot[] = [
     },
     createdAt: 2023,
   },
+  {
+    name: "桃花飾組",
+    image: "/assets/robots/2024-haru-a-momohana.JPG",
+    description: "2024関東春ロボコン Aチーム",
+    createdAt: 2024,
+  },
+  {
+    name: "@Roman",
+    image: "/assets/robots/2024-haru-b-atroman.JPG",
+    description: "2024関東春ロボコン Bチーム",
+    createdAt: 2024,
+  },
+  {
+    name: "一夜城",
+    image: "/assets/robots/2024-haru-c-ichiyajo.png",
+    description: "2024関東春ロボコン Cチーム",
+    result: "ベスト4/特別賞受賞",
+    createdAt: 2024,
+  },
 ];
 const robotsYearGrouped = robots.reduce((acc, robot) => {
   if (acc.has(robot.createdAt)) {
