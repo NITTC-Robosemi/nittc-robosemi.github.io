@@ -35,6 +35,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: '/entries' },
+      { text: 'Robots', link: '/robots' },
       {
         text: 'Contact',
         link: 'https://docs.google.com/forms/d/e/1FAIpQLScytDGcUURyp-uLLH25fj-WHMRDKrZNKTvx9yoTLjcVEeAT_w/viewform'
