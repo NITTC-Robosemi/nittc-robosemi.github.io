@@ -171,6 +171,7 @@ console.log(robotsYearGrouped);
   border: solid 2px var(--vp-c-brand);
   width: 70px;
   text-align: center;
+  z-index: 1;
 }
 
 .robotsSection .robot {
