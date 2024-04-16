@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 type Robot = {
   name: string;
-  image: string;
+  image?: string;
   description: string;
   result?: string;
   links?: Record<string, string>;
@@ -31,7 +31,7 @@ const robots: Robot[] = [
   },
   {
     name: "洗紫万紅",
-    image: "/assets/robots/2019-a-senshibanko.png",
+    // image: "/assets/robots/2019-a-senshibanko.png",
     description: "2019NHKロボコン Aチーム",
     createdAt: 2019,
     links: {
@@ -40,7 +40,7 @@ const robots: Robot[] = [
   },
   {
     name: "黎明",
-    image: "/assets/robots/2019-b-reimei.png",
+    // image: "/assets/robots/2019-b-reimei.png",
     description: "2019NHKロボコン Bチーム",
     createdAt: 2019,
     links: {
@@ -145,7 +145,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
     <template v-for="[createdAt, robots] in Array.from(robotsYearGrouped).reverse()" :key="createdAt">
       <div :class="$style.robotsSection" :data-year="createdAt">
         <div v-for="robot in robots" :key="robot.name" :class="$style.robot">
-          <img :src="robot.image" :alt="robot.name" :class="$style.image" data-zoomable />
+          <img v-if="robot.image" :src="robot.image" :alt="robot.name" :class="$style.image" data-zoomable />
           <span class="h1Like" :class="$style.name">{{ robot.name }}</span>
           <span :class="$style.text">{{ robot.description }}</span>
           <span v-if="robot.result" :class="$style.text">{{ robot.result }}</span>
