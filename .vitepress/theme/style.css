@@ -197,5 +197,5 @@
 
 .medium-zoom-image--opened {
   z-index: 22;
-  object-fit: contain;
+  object-fit: cover;
 }
