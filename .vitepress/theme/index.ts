@@ -5,11 +5,12 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import EntryHeader from '../components/EntryHeader.vue'
 import EntryFooter from '../components/EntryFooter.vue'
+import Layout from "../components/CustomLayout.vue";
 
 export default {
   extends: DefaultTheme,
   Layout: () => {
-    return h(DefaultTheme.Layout, null, {
+    return h(Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'doc-before': () => {
         const route = useRoute();

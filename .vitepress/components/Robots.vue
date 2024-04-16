@@ -137,16 +137,15 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   }
   return acc;
 }, new Map<number, Robot[]>());
-console.log(robotsYearGrouped);
 </script>
 
 <template>
   <h1>ロボット</h1>
   <p>東京高専ロボコンゼミが過去に作ったロボットを紹介します。</p>
-  <div>
-    <div v-for="[createdAt, robots] in Array.from(robotsYearGrouped).reverse()" :key="createdAt">
+    <template v-for="[createdAt, robots] in Array.from(robotsYearGrouped).reverse()" :key="createdAt">
       <div :class="$style.robotsSection" :data-year="createdAt">
-        <div v-for="robot in robots" :key="robot.name" :style="{backgroundImage: `url(${robot.image})`}" :class="$style.robot">
+        <div v-for="robot in robots" :key="robot.name" :class="$style.robot">
+          <img :src="robot.image" :alt="robot.name" :class="$style.image" data-zoomable />
           <span class="h1Like" :class="$style.name">{{ robot.name }}</span>
           <span :class="$style.text">{{ robot.description }}</span>
           <span v-if="robot.result" :class="$style.text">{{ robot.result }}</span>
@@ -155,8 +154,7 @@ console.log(robotsYearGrouped);
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
 </template>
 
 <style module>
@@ -178,7 +176,8 @@ console.log(robotsYearGrouped);
   border: solid 2px var(--vp-c-brand);
   width: 70px;
   text-align: center;
-  z-index: 1;
+  z-index: 22;
+  pointer-events: none;
 }
 
 .robotsSection .robot {
@@ -189,12 +188,11 @@ console.log(robotsYearGrouped);
   gap: 10px;
   margin-bottom: 20px;
   height: 400px;
-  background-size: cover;
-  background-position: center;
   border-radius: 10px;
   text-decoration: none;
   position: relative;
   border: solid 1px var(--vp-c-divider);
+  overflow: hidden;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -204,12 +202,16 @@ console.log(robotsYearGrouped);
 .name {
   color: var(--vp-c-white);
   text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
+  pointer-events: none;
+  user-select: none;
 }
 
 .text {
   color: var(--vp-c-white);
   font-weight: bold;
   text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
+  pointer-events: none;
+  user-select: none;
 }
 
 .links {
@@ -233,5 +235,20 @@ console.log(robotsYearGrouped);
 
 .links>.link:hover {
   border-color: var(--vp-c-brand);
+}
+
+.robot>.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  pointer-events: auto;
+}
+
+.robot>*:not(.image) {
+  z-index: 21;
 }
 </style>

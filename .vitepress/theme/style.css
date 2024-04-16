@@ -186,3 +186,16 @@
 .vp-doc img {
   border-radius: 12px;
 }
+
+.medium-zoom-overlay {
+  z-index: 20;
+}
+
+.medium-zoom-image {
+  z-index: 21;
+}
+
+.medium-zoom-image--opened {
+  z-index: 22;
+  object-fit: contain;
+}

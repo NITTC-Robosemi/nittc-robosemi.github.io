@@ -19,6 +19,7 @@
   },
   "packageManager": "pnpm@8.15.3",
   "dependencies": {
+    "medium-zoom": "^1.1.0",
     "vue3-carousel": "^0.3.3"
   }
 }
