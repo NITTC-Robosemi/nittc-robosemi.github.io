@@ -110,6 +110,18 @@ const robots: Robot[] = [
     createdAt: 2023,
   },
   {
+    name: "がらくた倶楽部",
+    image: "/assets/robots/2023-haru-grktclub.jpeg",
+    description: "2023関東春ロボコン",
+    createdAt: 2023,
+  },
+  {
+    name: "サンタのおつかい",
+    image: "/assets/robots/2023-haru-santa.png",
+    description: "2023関東春ロボコン",
+    createdAt: 2023,
+  },
+  {
     name: "桃花飾組",
     image: "/assets/robots/2024-haru-a-momohana.JPG",
     description: "2024関東春ロボコン Aチーム",
