@@ -8,4 +8,7 @@ lastUpdated: false
 import Entries from "/.vitepress/components/Entries.vue";
 </script>
 
-<Entries />
+<ClientOnly>
+  <Entries />
+</ClientOnly>
+
