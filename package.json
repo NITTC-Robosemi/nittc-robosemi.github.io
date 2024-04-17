@@ -17,7 +17,7 @@
     "vitepress": "1.0.0-rc.45",
     "vue": "^3.4.21"
   },
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@9.0.1",
   "dependencies": {
     "@tabler/icons-vue": "^3.2.0",
     "medium-zoom": "^1.1.0",
