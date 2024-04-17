@@ -199,3 +199,7 @@
   z-index: 22;
   object-fit: cover;
 }
+
+:root {
+  --vp-z-index-local-nav: 25 !important;
+}

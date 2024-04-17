@@ -37,7 +37,7 @@ const next = computed(() => entries[index.value + 1]);
 .pageFooter * {
   display: block;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 11px 16px 13px;
   transition: border-color .25s, color .25s, transform .25s;
   line-height: 20px;

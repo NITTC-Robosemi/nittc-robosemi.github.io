@@ -48,7 +48,7 @@ const entry = computed(() => getEntry(route.path));
 
 .tags > .tag {
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: var(--vp-c-gray-soft);
   text-decoration: none;
   border: 1px solid transparent;

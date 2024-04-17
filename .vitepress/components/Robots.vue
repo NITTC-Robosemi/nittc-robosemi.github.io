@@ -153,14 +153,16 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
 
 <template>
   <h1>ロボット</h1>
-  <p>東京高専ロボコンゼミが過去に作ったロボットを紹介します。</p>
+  <p>東京高専ロボコンゼミが過去に作ったロボットを紹介します。<br>画像はクリック/タップで拡大できます。</p>
     <template v-for="[createdAt, robots] in Array.from(robotsYearGrouped).reverse()" :key="createdAt">
       <div :class="$style.robotsSection" :data-year="createdAt">
         <div v-for="robot in robots" :key="robot.name" :class="$style.robot">
           <img v-if="robot.image" :src="robot.image" :alt="robot.name" :class="$style.image" data-zoomable />
-          <span class="h1Like" :class="$style.name">{{ robot.name }}</span>
-          <span :class="$style.text">{{ robot.description }}</span>
-          <span v-if="robot.result" :class="$style.text">{{ robot.result }}</span>
+          <div :class="$style.texts">
+            <span class="h1Like" :class="$style.name">{{ robot.name }}</span>
+            <span :class="$style.text">{{ robot.description }}</span>
+            <span v-if="robot.result" :class="$style.text">{{ robot.result }}</span>
+          </div>
           <div :class="$style.links">
             <a v-for="(url, name) in robot.links" :key="name" :href="url" :class="$style.link">{{ name }}</a>
           </div>
@@ -184,7 +186,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   top: 0;
   padding: 10px;
   background-color: var(--vp-c-bg);
-  border-radius: 5px;
+  border-radius: 6px;
   border: solid 2px var(--vp-c-brand);
   width: 70px;
   text-align: center;
@@ -192,15 +194,14 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   pointer-events: none;
 }
 
-.robotsSection .robot {
+.robot {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px;
   gap: 10px;
   margin-bottom: 20px;
   height: 400px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
   position: relative;
   border: solid 1px var(--vp-c-divider);
@@ -211,9 +212,18 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   }
 }
 
+.texts {
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  gap: 7px;
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, var(--vp-backdrop-bg-color) 30%, transparent 70%);
+}
+
 .name {
   color: var(--vp-c-white);
-  text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
   pointer-events: none;
   user-select: none;
 }
@@ -221,7 +231,6 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
 .text {
   color: var(--vp-c-white);
   font-weight: bold;
-  text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
   pointer-events: none;
   user-select: none;
 }
@@ -237,7 +246,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
 
 .links>.link {
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1) !important;
   text-decoration: none;
@@ -249,7 +258,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   border-color: var(--vp-c-brand);
 }
 
-.robot>.image {
+.image {
   position: absolute;
   top: 0;
   left: 0;

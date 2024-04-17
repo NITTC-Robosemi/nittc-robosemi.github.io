@@ -38,7 +38,7 @@ const title = tag ? `タグ検索: ${tag}` : '記事一覧'
 .entry {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none !important;
   background-color: var(--vp-c-gray-soft);
   border: 1px solid var(--vp-c-divider);
