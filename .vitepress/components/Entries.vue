@@ -41,7 +41,7 @@ const title = tag ? `タグ検索: ${tag}` : '記事一覧'
   border-radius: 10px;
   text-decoration: none !important;
   background-color: var(--vp-c-gray-soft);
-  border: 1px solid transparent;
+  border: 1px solid var(--vp-c-divider);
   transition: border-color 0.25s !important;
   overflow: hidden;
 }
@@ -59,7 +59,7 @@ const title = tag ? `タグ検索: ${tag}` : '記事一覧'
 }
 
 .entry > img {
-  max-height: 150px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: 0;
