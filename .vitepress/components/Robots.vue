@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { IconLink } from "@tabler/icons-vue";
+
 type Robot = {
   name: string;
   image?: string;
@@ -164,7 +166,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
             <span v-if="robot.result" :class="$style.text">{{ robot.result }}</span>
           </div>
           <div :class="$style.links">
-            <a v-for="(url, name) in robot.links" :key="name" :href="url" :class="$style.link">{{ name }}</a>
+            <a v-for="(url, name) in robot.links" :key="name" :href="url" :class="$style.link"><IconLink />{{ name }}</a>
           </div>
         </div>
       </div>
@@ -252,6 +254,10 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   text-decoration: none;
   border: 1px solid var(--vp-c-divider);
   transition: border-color 0.25s;
+  font-weight: bold;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
 }
 
 .links>.link:hover {

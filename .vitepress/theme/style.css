@@ -203,3 +203,7 @@
 :root {
   --vp-z-index-local-nav: 25 !important;
 }
+
+.tabler-icon {
+  width: 1.5em;
+}
