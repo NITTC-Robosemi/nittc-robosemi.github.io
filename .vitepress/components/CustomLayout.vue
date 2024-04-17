@@ -6,7 +6,9 @@ import { useRoute } from "vitepress";
 
 const route = useRoute();
 function initZoom() {
-  mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' });
+  const path = route.path;
+  const selector = path.startsWith("/entries/") ? ".vp-doc img" : "[data-zoomable]";
+  mediumZoom(selector, { background: 'var(--vp-c-bg)' });
 }
 onMounted(initZoom);
 watch(
