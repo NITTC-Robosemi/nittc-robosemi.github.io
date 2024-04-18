@@ -159,7 +159,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-font-family-base: "Inter var", "Noto Sans JP", sans-serif;
+  --vp-font-family-base: "Inter", "Noto Sans JP", sans-serif;
 }
 
 ::selection {
