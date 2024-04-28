@@ -25,6 +25,9 @@ export default defineConfig({
   lastUpdated: true,
   markdown: {
     theme: "one-dark-pro",
+    config: (md) => {
+      md.set({ breaks: true });
+    },
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
