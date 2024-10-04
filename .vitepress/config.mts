@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import ViteImageMin from 'vite-plugin-imagemin';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -54,4 +55,33 @@ export default defineConfig({
   sitemap: {
     hostname: "https://nittc-robosemi.github.io",
   },
-})
+  vite: {
+    plugins: [
+      ViteImageMin({
+        gifsicle: {
+          optimizationLevel: 7,
+          interlaced: false,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+        jpegTran: {},
+        pngquant: {
+          quality: [0.8, 0.9],
+          speed: 4,
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox',
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false,
+            },
+          ],
+        },
+      }),
+    ],
+  },
+});

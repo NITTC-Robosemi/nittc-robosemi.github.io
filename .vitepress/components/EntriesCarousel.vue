@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import 'vue3-carousel/dist/carousel.css';
-// https://github.com/ismail9k/vue3-carousel/issues/372
-// https://github.com/ismail9k/vue3-carousel/pull/373
-import { Carousel, Slide, Navigation } from 'vue3-carousel/dist/carousel.es.js';
+import { Carousel, Slide, Navigation } from 'vue3-carousel';
 import { data } from "../scripts/entries.data.js";
 import { getDisplayOnCarousel, getThumbnailOrDefault, getTitle } from "../scripts/get-from-entry";
 import { withBase } from "vitepress";
