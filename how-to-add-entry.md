@@ -20,7 +20,7 @@
 ---
 title: hoge
 description: fugafugafuga
-thumbnail: /entries/assets/2024-01-01-thumbnail.jpg
+thumbnail: /entries/assets/2024-01-01-thumbnail.webp
 tags: [hoge, fuga]
 ---
 
@@ -31,5 +31,5 @@ fugafugafuga
 fugafugafugafuga
 :::
 
-![hoge](/entries/assets/2024-01-01-image.jpg)
+![hoge](/entries/assets/2024-01-01-image.webp)
 ```

@@ -17,7 +17,7 @@ export function getThumbnail(entry: ContentData): string {
 }
 
 export function getThumbnailOrDefault(entry: ContentData): string {
-  return getThumbnail(entry) ?? withBase("/assets/CPAL5629.PNG");
+  return getThumbnail(entry) ?? withBase("/assets/CPAL5629.webp");
 }
 
 export function getDisplayOnCarousel(entry: ContentData): boolean {

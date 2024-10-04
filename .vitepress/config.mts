@@ -6,12 +6,12 @@ export default defineConfig({
   description: "東京高専ロボコンゼミの公式ウェブサイトです。",
   lang: "ja",
   head: [
-    ['link', { rel: 'icon', href: '/assets/TJUJ9115.PNG' }],
+    ['link', { rel: 'icon', href: '/assets/TJUJ9115.webp' }],
     ['link', {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap'
     }],
-    ['meta', { property: "og:image", content: "https://nittc-robosemi.github.io/assets/TJUJ9115.PNG" }],
+    ['meta', { property: "og:image", content: "https://nittc-robosemi.github.io/assets/TJUJ9115.webp" }],
     ['meta', { property: "og:title", content: "東京高専ロボコンゼミ" }],
     ['meta', { property: "og:description", content: "東京高専ロボコンゼミの公式ウェブサイトです。" }],
   ],
@@ -31,7 +31,7 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/TJUJ9115.PNG',
+    logo: '/assets/TJUJ9115.webp',
     search: {
       provider: 'local',
     },

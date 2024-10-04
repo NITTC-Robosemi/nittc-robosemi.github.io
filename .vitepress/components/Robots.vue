@@ -12,7 +12,7 @@ type Robot = {
 const robots: Robot[] = [
   {
     name: "Strelitzia",
-    image: "/assets/robots/2018-a-strelitzia.jpg",
+    image: "/assets/robots/2018-a-strelitzia.webp",
     description: "2018NHKロボコン Aチーム",
     result: "地区大会ベスト5",
     createdAt: 2018,
@@ -22,7 +22,7 @@ const robots: Robot[] = [
   },
   {
     name: "CLΘCKWISE",
-    image: "/assets/robots/2018-b-clockwise.jpg",
+    image: "/assets/robots/2018-b-clockwise.webp",
     description: "2018NHKロボコン Bチーム",
     result: "地区大会優勝/全国大会出場/エキシビションにて非公式全国大会最速Vゴール",
     createdAt: 2018,
@@ -33,7 +33,7 @@ const robots: Robot[] = [
   },
   {
     name: "洗紫万紅",
-    // image: "/assets/robots/2019-a-senshibanko.png",
+    // image: "/assets/robots/2019-a-senshibanko.webp",
     description: "2019NHKロボコン Aチーム",
     createdAt: 2019,
     links: {
@@ -42,7 +42,7 @@ const robots: Robot[] = [
   },
   {
     name: "黎明",
-    // image: "/assets/robots/2019-b-reimei.png",
+    // image: "/assets/robots/2019-b-reimei.webp",
     description: "2019NHKロボコン Bチーム",
     createdAt: 2019,
     links: {
@@ -51,7 +51,7 @@ const robots: Robot[] = [
   },
   {
     name: "NIT東響楽団演奏会",
-    image: "/assets/robots/2020-a-nitharmonics.png",
+    image: "/assets/robots/2020-a-nitharmonics.webp",
     description: "2020NHKロボコン Aチーム",
     result: "特別賞受賞",
     createdAt: 2020,
@@ -62,7 +62,7 @@ const robots: Robot[] = [
   },
   {
     name: "TRICKSTER",
-    image: "/assets/robots/2021-a-trickster.png",
+    image: "/assets/robots/2021-a-trickster.webp",
     description: "2021NHKロボコン Aチーム",
     result: "地区大会優勝/全国大会9位",
     createdAt: 2021,
@@ -72,21 +72,21 @@ const robots: Robot[] = [
   },
   {
     name: "Mt.高尾",
-    image: "/assets/robots/2021-b-mttakao.jpg",
+    image: "/assets/robots/2021-b-mttakao.webp",
     description: "2021NHKロボコン Bチーム",
     result: "地区大会アイデア賞受賞",
     createdAt: 2021,
   },
   {
     name: "鶴翼",
-    image: "/assets/robots/2022-a-kakuyoku.png",
+    image: "/assets/robots/2022-a-kakuyoku.webp",
     description: "2022NHKロボコン Aチーム",
     result: "地区大会ベスト5",
     createdAt: 2022,
   },
   {
     name: "∞∞∞",
-    image: "/assets/robots/2022-b-trinity.png",
+    image: "/assets/robots/2022-b-trinity.webp",
     description: "2022NHKロボコン Bチーム",
     result: "地区大会準優勝/全国大会出場",
     createdAt: 2022,
@@ -96,14 +96,14 @@ const robots: Robot[] = [
   },
   {
     name: "木ノ実ヤグラ",
-    image: "/assets/robots/2023-a-kinomiyagura.jpeg",
+    image: "/assets/robots/2023-a-kinomiyagura.webp",
     description: "2023NHKロボコン Aチーム",
     result: "地区大会特別賞受賞",
     createdAt: 2023,
   },
   {
     name: "S∅PNIR",
-    image: "/assets/robots/2023-b-sleipnir.png",
+    image: "/assets/robots/2023-b-sleipnir.webp",
     description: "2023NHKロボコン Bチーム",
     result: "地区大会ベスト4・技術賞/全国大会出場",
     links: {
@@ -113,42 +113,38 @@ const robots: Robot[] = [
   },
   {
     name: "がらくた倶楽部",
-    image: "/assets/robots/2023-haru-grktclub.jpeg",
+    image: "/assets/robots/2023-haru-grktclub.webp",
     description: "2023関東春ロボコン",
     createdAt: 2023,
   },
   {
     name: "サンタのおつかい",
-    image: "/assets/robots/2023-haru-santa.png",
+    image: "/assets/robots/2023-haru-santa.webp",
     description: "2023関東春ロボコン",
     createdAt: 2023,
   },
   {
     name: "桃花飾組",
-    image: "/assets/robots/2024-haru-a-momohana.JPG",
+    image: "/assets/robots/2024-haru-a-momohana.webp",
     description: "2024関東春ロボコン Aチーム",
     createdAt: 2024,
   },
   {
     name: "@Roman",
-    image: "/assets/robots/2024-haru-b-atroman.JPG",
+    image: "/assets/robots/2024-haru-b-atroman.webp",
     description: "2024関東春ロボコン Bチーム",
     createdAt: 2024,
   },
   {
     name: "一夜城",
-    image: "/assets/robots/2024-haru-c-ichiyajo.png",
+    image: "/assets/robots/2024-haru-c-ichiyajo.webp",
     description: "2024関東春ロボコン Cチーム",
     result: "ベスト4/特別賞受賞",
     createdAt: 2024,
   },
 ];
 const robotsYearGrouped = robots.reduce((acc, robot) => {
-  if (acc.has(robot.createdAt)) {
-    acc.set(robot.createdAt, [...acc.get(robot.createdAt), robot]);
-  } else {
-    acc.set(robot.createdAt, [robot]);
-  }
+  acc.set(robot.createdAt, [...(acc.get(robot.createdAt) ?? []), robot]);
   return acc;
 }, new Map<number, Robot[]>());
 </script>

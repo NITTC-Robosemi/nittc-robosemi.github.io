@@ -4,7 +4,7 @@ layout: home
 title: ""
 hero:
   image:
-    src: /assets/IMG_E2445_logo.png
+    src: /assets/IMG_E2445_logo.webp
     alt: Logo
   name: "新しいアイデアを"
   text: "東京高専ロボコンゼミ"
@@ -12,19 +12,19 @@ hero:
 features:
   - title: "設計"
     icon:
-      src: "/assets/IQZQ9738.PNG"
+      src: "/assets/IQZQ9738.webp"
     details: "3DCADを用いた設計"
   - title: "加工"
     icon:
-      src: "/assets/BXDE2645.PNG"
+      src: "/assets/BXDE2645.webp"
     details: "本体の加工・組立"
   - title: "回路"
     icon:
-      src: "/assets/AKGB0504.PNG"
+      src: "/assets/AKGB0504.webp"
     details: "電子回路の設計・製作"
   - title: "制御"
     icon:
-      src: "/assets/VVAG0578.PNG"
+      src: "/assets/VVAG0578.webp"
     details: "マイコンを用いた制御"
 ---
 
