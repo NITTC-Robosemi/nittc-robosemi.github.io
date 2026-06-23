@@ -17,18 +17,21 @@ const robots: Robot[] = [
     result: "地区大会ベスト5",
     createdAt: 2018,
     links: {
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2018",
-    }
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2018",
+    },
   },
   {
     name: "CLΘCKWISE",
     image: "/assets/robots/2018-b-clockwise.webp",
     description: "2018NHKロボコン Bチーム",
-    result: "地区大会優勝/全国大会出場/エキシビションにて非公式全国大会最速Vゴール",
+    result:
+      "地区大会優勝/全国大会出場/エキシビションにて非公式全国大会最速Vゴール",
     createdAt: 2018,
     links: {
-      "PV": "https://www.youtube.com/watch?v=17SvYzGcg18",
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2018",
+      PV: "https://www.youtube.com/watch?v=17SvYzGcg18",
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2018",
     },
   },
   {
@@ -37,7 +40,8 @@ const robots: Robot[] = [
     description: "2019NHKロボコン Aチーム",
     createdAt: 2019,
     links: {
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2019",
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2019",
     },
   },
   {
@@ -46,7 +50,8 @@ const robots: Robot[] = [
     description: "2019NHKロボコン Bチーム",
     createdAt: 2019,
     links: {
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2019",
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2019",
     },
   },
   {
@@ -56,8 +61,9 @@ const robots: Robot[] = [
     result: "特別賞受賞",
     createdAt: 2020,
     links: {
-      "PV": "https://www.youtube.com/watch?v=PNQ_LcuqU60",
-      "旧サイトで見る": "https://sites.google.com/view/nittc-robocon/nhk-records/2020",
+      PV: "https://www.youtube.com/watch?v=PNQ_LcuqU60",
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2020",
     },
   },
   {
@@ -67,7 +73,7 @@ const robots: Robot[] = [
     result: "地区大会優勝/全国大会9位",
     createdAt: 2021,
     links: {
-      "PV": "https://www.youtube.com/watch?v=o-QHMa3JWDI",
+      PV: "https://www.youtube.com/watch?v=o-QHMa3JWDI",
     },
   },
   {
@@ -91,7 +97,7 @@ const robots: Robot[] = [
     result: "地区大会準優勝/全国大会出場",
     createdAt: 2022,
     links: {
-      "PV": "https://www.youtube.com/watch?v=rUCy4x1DraI",
+      PV: "https://www.youtube.com/watch?v=rUCy4x1DraI",
     },
   },
   {
@@ -107,7 +113,7 @@ const robots: Robot[] = [
     description: "2023NHKロボコン Bチーム",
     result: "地区大会ベスト4・技術賞/全国大会出場",
     links: {
-      "PV": "https://www.youtube.com/watch?v=Fu7AD7VwOIU",
+      PV: "https://www.youtube.com/watch?v=Fu7AD7VwOIU",
     },
     createdAt: 2023,
   },
@@ -151,22 +157,41 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
 
 <template>
   <h1>ロボット</h1>
-  <p>東京高専ロボコンゼミが過去に作ったロボットを紹介します。<br>画像はクリック/タップで拡大できます。</p>
-    <template v-for="[createdAt, robots] in Array.from(robotsYearGrouped).reverse()" :key="createdAt">
-      <div :class="$style.robotsSection" :data-year="createdAt">
-        <div v-for="robot in robots" :key="robot.name" :class="$style.robot">
-          <img v-if="robot.image" :src="robot.image" :alt="robot.name" :class="$style.image" data-zoomable />
-          <div :class="$style.texts">
-            <span class="h1Like" :class="$style.name">{{ robot.name }}</span>
-            <span :class="$style.text">{{ robot.description }}</span>
-            <span v-if="robot.result" :class="$style.text">{{ robot.result }}</span>
-          </div>
-          <div :class="$style.links">
-            <a v-for="(url, name) in robot.links" :key="name" :href="url" :class="$style.link"><IconLink />{{ name }}</a>
-          </div>
+  <p>
+    東京高専ロボコンゼミが過去に作ったロボットを紹介します。<br />画像はクリック/タップで拡大できます。
+  </p>
+  <template
+    v-for="[createdAt, robots] in Array.from(robotsYearGrouped).reverse()"
+    :key="createdAt"
+  >
+    <div :class="$style.robotsSection" :data-year="createdAt">
+      <div v-for="robot in robots" :key="robot.name" :class="$style.robot">
+        <img
+          v-if="robot.image"
+          :src="robot.image"
+          :alt="robot.name"
+          :class="$style.image"
+          data-zoomable
+        />
+        <div :class="$style.texts">
+          <span class="h1Like" :class="$style.name">{{ robot.name }}</span>
+          <span :class="$style.text">{{ robot.description }}</span>
+          <span v-if="robot.result" :class="$style.text">{{
+            robot.result
+          }}</span>
+        </div>
+        <div :class="$style.links">
+          <a
+            v-for="(url, name) in robot.links"
+            :key="name"
+            :href="url"
+            :class="$style.link"
+            ><IconLink />{{ name }}</a
+          >
         </div>
       </div>
-    </template>
+    </div>
+  </template>
 </template>
 
 <style module>
@@ -217,7 +242,11 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   gap: 7px;
   width: 100%;
   padding: 15px 20px;
-  background: linear-gradient(90deg, var(--vp-backdrop-bg-color) 30%, transparent 70%);
+  background: linear-gradient(
+    90deg,
+    var(--vp-backdrop-bg-color) 30%,
+    transparent 70%
+  );
 }
 
 .name {
@@ -242,7 +271,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   bottom: 20px;
 }
 
-.links>.link {
+.links > .link {
   padding: 5px 10px;
   border-radius: 6px;
   background-color: var(--vp-c-bg-soft);
@@ -256,7 +285,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   justify-content: center;
 }
 
-.links>.link:hover {
+.links > .link:hover {
   border-color: var(--vp-c-brand);
 }
 
@@ -271,7 +300,7 @@ const robotsYearGrouped = robots.reduce((acc, robot) => {
   pointer-events: auto;
 }
 
-.robot>*:not(.image) {
+.robot > *:not(.image) {
   z-index: 21;
 }
 </style>

@@ -1,6 +1,16 @@
 {
   "compilerOptions": {
-    "lib": ["ES2021"]
+    "lib": ["ES2021", "DOM"],
+    "noUncheckedSideEffectImports": false,
   },
-  "include": [".vitepress/**/*.ts"],
+  "include": [
+    "**/*.js",
+    "**/*.ts",
+    "**/*.vue",
+    "**/*.css",
+    ".vitepress/**/*.js",
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.vue",
+    ".vitepress/**/*.css",
+  ],
 }

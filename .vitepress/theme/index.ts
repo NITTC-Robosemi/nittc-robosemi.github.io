@@ -1,10 +1,10 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import { type Theme, useRoute } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
-import EntryHeader from '../components/EntryHeader.vue'
-import EntryFooter from '../components/EntryFooter.vue'
+import { h } from "vue";
+import { type Theme, useRoute } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+import "./style.css";
+import EntryHeader from "../components/EntryHeader.vue";
+import EntryFooter from "../components/EntryFooter.vue";
 import Layout from "../components/CustomLayout.vue";
 
 export default {
@@ -12,20 +12,19 @@ export default {
   Layout: () => {
     return h(Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-before': () => {
+      "doc-before": () => {
         const route = useRoute();
-        if (route.path.startsWith('/entries/')) {
+        if (route.path.startsWith("/entries/")) {
           return h(EntryHeader);
         }
       },
-      'doc-after': () => {
+      "doc-after": () => {
         const route = useRoute();
-        if (route.path.startsWith('/entries/')) {
+        if (route.path.startsWith("/entries/")) {
           return h(EntryFooter);
         }
       },
-    })
+    });
   },
-  enhanceApp({ app, router, siteData }) {
-  }
-} satisfies Theme
+  enhanceApp(_) {},
+} satisfies Theme;

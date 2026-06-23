@@ -1,4 +1,4 @@
-import { data } from './entries.data.js'
+import { data } from "./entries.data.js";
 import { withBase } from "vitepress";
 
 const entries = [...data];

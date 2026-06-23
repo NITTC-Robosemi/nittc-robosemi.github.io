@@ -1,7 +1,11 @@
 <script lang="ts" setup>
-import { useRoute, withBase } from 'vitepress';
+import { useRoute } from "vitepress";
 import { getEntry } from "../scripts/get-entry";
-import { getTags, getThumbnailOrDefault, getTitle } from "../scripts/get-from-entry";
+import {
+  getTags,
+  getThumbnailOrDefault,
+  getTitle,
+} from "../scripts/get-from-entry";
 import { computed } from "vue";
 
 const route = useRoute();
@@ -9,13 +13,22 @@ const entry = computed(() => getEntry(route.path));
 </script>
 
 <template>
-  <div :style="{ backgroundImage: `url(${getThumbnailOrDefault(entry)})` }"
-       :class="$style.pageHeader">
-    <span class="h1Like">{{ getTitle(entry) }}</span>
-  </div>
-  <div :class="$style.tags">
-    <a :class="$style.tag" v-for="tag in getTags(entry)" :href="`/entries?tag=${tag}`">{{ tag }}</a>
-  </div>
+  <template v-if="entry">
+    <div
+      :style="{ backgroundImage: `url(${getThumbnailOrDefault(entry)})` }"
+      :class="$style.pageHeader"
+    >
+      <span class="h1Like">{{ getTitle(entry) }}</span>
+    </div>
+    <div :class="$style.tags">
+      <a
+        :class="$style.tag"
+        v-for="tag in getTags(entry)"
+        :href="`/entries?tag=${tag}`"
+        >{{ tag }}</a
+      >
+    </div>
+  </template>
 </template>
 
 <style module>
@@ -34,7 +47,9 @@ const entry = computed(() => getEntry(route.path));
 }
 
 .pageHeader > span {
-  text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
+  text-shadow:
+    0 0 5px var(--vp-c-black),
+    0 0 10px var(--vp-c-black);
   color: var(--vp-c-white);
   text-align: center;
 }

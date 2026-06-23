@@ -1,18 +1,34 @@
 <script lang="ts" setup>
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Navigation } from 'vue3-carousel';
+import "vue3-carousel/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 import { data } from "../scripts/entries.data.js";
-import { getDisplayOnCarousel, getThumbnailOrDefault, getTitle } from "../scripts/get-from-entry";
+import {
+  getDisplayOnCarousel,
+  getThumbnailOrDefault,
+  getTitle,
+} from "../scripts/get-from-entry";
 import { withBase } from "vitepress";
-const entries = [...data].reverse().filter((entry) => getDisplayOnCarousel(entry)).slice(0, 5);
+
+const entries = [...data]
+  .reverse()
+  .filter((entry) => getDisplayOnCarousel(entry))
+  .slice(0, 5);
 </script>
 
 <template>
-  <Carousel :autoplay="5000" :wrap-around="true" :mouse-drag="false" :class="$style.root" v-if="entries.length > 0">
+  <Carousel
+    :autoplay="undefined"
+    :wrap-around="true"
+    :mouse-drag="false"
+    :class="$style.root"
+    v-if="entries.length > 0"
+  >
     <Slide v-for="entry in entries" :key="entry.url">
       <a :href="withBase(entry.url)" :class="$style.link">
-        <div :style="{ backgroundImage: `url(${getThumbnailOrDefault(entry)})` }"
-             :class="$style.slide">
+        <div
+          :style="{ backgroundImage: `url(${getThumbnailOrDefault(entry)})` }"
+          :class="$style.slide"
+        >
           <span class="h1Like">{{ getTitle(entry) }}</span>
         </div>
       </a>
@@ -48,12 +64,19 @@ const entries = [...data].reverse().filter((entry) => getDisplayOnCarousel(entry
 }
 
 .slide > span {
-  text-shadow: 0 0 5px var(--vp-c-black), 0 0 10px var(--vp-c-black);
+  text-shadow:
+    0 0 5px var(--vp-c-black),
+    0 0 10px var(--vp-c-black);
   color: var(--vp-c-white);
 }
 </style>
 
 <style>
+.carousel__track {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .carousel__slide {
   padding: 2px;
 }

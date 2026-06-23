@@ -1,7 +1,14 @@
 import { ContentData, withBase } from "vitepress";
 
 export function getTitle(entry: ContentData): string {
-  return entry.frontmatter.title ?? entry.src?.split("\n").find((row => row.startsWith("# ")))?.replace("# ", "") ?? "No Title";
+  return (
+    entry.frontmatter.title ??
+    entry.src
+      ?.split("\n")
+      .find((row) => row.startsWith("# "))
+      ?.replace("# ", "") ??
+    "No Title"
+  );
 }
 
 export function getDescription(entry: ContentData): string {
@@ -12,8 +19,10 @@ export function getTags(entry: ContentData): string[] {
   return entry.frontmatter.tags;
 }
 
-export function getThumbnail(entry: ContentData): string {
-  return entry.frontmatter.thumbnail ? withBase(entry.frontmatter.thumbnail) : null;
+export function getThumbnail(entry: ContentData): string | null {
+  return entry.frontmatter.thumbnail
+    ? withBase(entry.frontmatter.thumbnail)
+    : null;
 }
 
 export function getThumbnailOrDefault(entry: ContentData): string {

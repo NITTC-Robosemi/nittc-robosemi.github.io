@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # Check current directory
 if [ ! -d "public/assets" ]; then

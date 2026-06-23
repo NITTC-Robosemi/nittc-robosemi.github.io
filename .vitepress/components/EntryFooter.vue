@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { useRoute, withBase } from 'vitepress';
-import { data } from '../scripts/entries.data.js'
-import { getTitle } from '../scripts/get-from-entry';
+import { useRoute, withBase } from "vitepress";
+import { data } from "../scripts/entries.data.js";
+import { getTitle } from "../scripts/get-from-entry";
 import { getEntryIndex } from "../scripts/get-entry";
 
 const entries = [...data];
@@ -14,8 +14,12 @@ const next = computed(() => entries[index.value + 1]);
 
 <template>
   <div :class="$style.pageFooter">
-    <a v-if="prev" :href="withBase(prev.url)" :class="$style.prev"> {{ getTitle(prev) }}</a>
-    <a v-if="next" :href="withBase(next.url)" :class="$style.next">{{ getTitle(next) }} </a>
+    <a v-if="prev" :href="withBase(prev.url)" :class="$style.prev">
+      {{ getTitle(prev) }}</a
+    >
+    <a v-if="next" :href="withBase(next.url)" :class="$style.next"
+      >{{ getTitle(next) }}
+    </a>
   </div>
 </template>
 
@@ -39,7 +43,10 @@ const next = computed(() => entries[index.value + 1]);
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
   padding: 11px 16px 13px;
-  transition: border-color .25s, color .25s, transform .25s;
+  transition:
+    border-color 0.25s,
+    color 0.25s,
+    transform 0.25s;
   line-height: 20px;
   font-size: 14px;
   font-weight: 500;

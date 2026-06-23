@@ -1,30 +1,51 @@
 <script lang="ts" setup>
-import { data } from '../scripts/entries.data.js'
-import { getDescription, getTags, getThumbnail, getTitle } from '../scripts/get-from-entry';
-import { withBase } from 'vitepress';
+import { data } from "../scripts/entries.data.js";
+import {
+  getDescription,
+  getTags,
+  getThumbnail,
+  getTitle,
+} from "../scripts/get-from-entry";
+import { withBase } from "vitepress";
 import { ref } from "vue";
-import { VPButton } from 'vitepress/theme';
+import { VPButton } from "vitepress/theme";
 
 const size = 20;
-const tag = new URLSearchParams(location.search).get('tag');
-// O(N)かかるけどまあいけるだろ！w
-const entries = [...data].reverse().filter((entry) => !tag || getTags(entry)?.includes(tag));
+const tag = new URLSearchParams(location.search).get("tag");
+const entries = [...data]
+  .reverse()
+  .filter((entry) => !tag || getTags(entry)?.includes(tag));
 const entriesToShow = ref(entries.slice(0, size));
-const title = tag ? `タグ検索: ${tag}` : '記事一覧'
+const title = tag ? `タグ検索: ${tag}` : "記事一覧";
 </script>
 
 <template>
   <h1>{{ title }}</h1>
   <p :class="$style.entries">
-    <a v-for="entry in entriesToShow" :key="entry.url" :href="withBase(entry.url)" :class="$style.entry">
-      <img v-if="getThumbnail(entry)" :src="getThumbnail(entry)" alt="thumbnail"/>
+    <a
+      v-for="entry in entriesToShow"
+      :key="entry.url"
+      :href="withBase(entry.url)"
+      :class="$style.entry"
+    >
+      <img
+        v-if="getThumbnail(entry)"
+        :src="getThumbnail(entry)!"
+        alt="thumbnail"
+      />
       <div :class="$style.bottom">
         <span :class="$style.title">{{ getTitle(entry) }}</span>
-        <span v-if="getDescription(entry)" :class="$style.description">{{ getDescription(entry) }}</span>
+        <span v-if="getDescription(entry)" :class="$style.description">{{
+          getDescription(entry)
+        }}</span>
       </div>
     </a>
-    <VPButton v-if="entriesToShow.length < entries.length"
-              text="もっと見る" theme="alt" @click="entriesToShow = entries.slice(0, entriesToShow.length + size)"/>
+    <VPButton
+      v-if="entriesToShow.length < entries.length"
+      text="もっと見る"
+      theme="alt"
+      @click="entriesToShow = entries.slice(0, entriesToShow.length + size)"
+    />
   </p>
 </template>
 
@@ -78,6 +99,7 @@ const title = tag ? `タグ検索: ${tag}` : '記事一覧'
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   color: var(--vp-c-text-2);
 }
