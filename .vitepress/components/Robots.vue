@@ -162,6 +162,20 @@ const robots: Robot[] = [
     createdAt: 2024,
   },
   {
+    name: "建蔵",
+    image: "/assets/robots/2025-a-tatezou.jpg",
+    description: "2025NHKロボコン Aチーム",
+    result: "地区大会特別賞受賞",
+    createdAt: 2025,
+  },
+  {
+    name: "明修羅",
+    image: "/assets/robots/2025-b-asyura.jpg",
+    description: "2025NHKロボコン Bチーム",
+    resuli: "地区大会技術賞/全国大会出場",
+    createdAt: 2025,
+  },
+  {
     name: "鵥",
     image: "/assets/robots/2025-haru-kakesu.jpg",
     description: "2025関東春ロボコン Aチーム",
