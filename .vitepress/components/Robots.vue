@@ -150,7 +150,7 @@ const robots: Robot[] = [
   },
   {
     name: "Astarium",
-    image: "/assets/robots/2024-a-astarium",
+    image: "/assets/robots/2024-a-astarium.png",
     description: "2024NHKロボコン Aチーム",
     result: "地区大会特別賞受賞",
     createdAt: 2024,
