@@ -172,7 +172,7 @@ const robots: Robot[] = [
     name: "明修羅",
     image: "/assets/robots/2025-b-asyura.jpg",
     description: "2025NHKロボコン Bチーム",
-    resuli: "地区大会技術賞/全国大会出場",
+    result: "地区大会技術賞/全国大会出場",
     createdAt: 2025,
     links: {
       PV: "https://youtu.be/lZW2xDpCR1E",
