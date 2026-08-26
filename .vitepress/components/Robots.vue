@@ -137,6 +137,12 @@ const robots: Robot[] = [
     createdAt: 2024,
   },
   {
+    name: "BeeKeeper",
+    image: "/assets/robots/2024-b-beekeeper.jpg",
+    description: "2024NHKロボコン Bチーム",
+    createdAt: 2024,
+  },
+  {
     name: "桃花飾組",
     image: "/assets/robots/2024-haru-a-momohana.webp",
     description: "2024関東春ロボコン Aチーム",
