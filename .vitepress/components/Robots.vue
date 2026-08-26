@@ -148,6 +148,13 @@ const robots: Robot[] = [
     result: "ベスト4/特別賞受賞",
     createdAt: 2024,
   },
+  {
+    name: "Astarium",
+    image: "/assets/robots/2024-a-astarium",
+    description: "2024NHKロボコン Aチーム",
+    result: "地区大会特別賞受賞",
+    createdAt: 2024,
+  },
 ];
 const robotsYearGrouped = robots.reduce((acc, robot) => {
   acc.set(robot.createdAt, [...(acc.get(robot.createdAt) ?? []), robot]);
