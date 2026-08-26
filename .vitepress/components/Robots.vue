@@ -130,6 +130,13 @@ const robots: Robot[] = [
     createdAt: 2023,
   },
   {
+    name: "Astarium",
+    image: "/assets/robots/2024-a-astarium.png",
+    description: "2024NHKロボコン Aチーム",
+    result: "地区大会特別賞受賞",
+    createdAt: 2024,
+  },
+  {
     name: "桃花飾組",
     image: "/assets/robots/2024-haru-a-momohana.webp",
     description: "2024関東春ロボコン Aチーム",
@@ -146,13 +153,6 @@ const robots: Robot[] = [
     image: "/assets/robots/2024-haru-c-ichiyajo.webp",
     description: "2024関東春ロボコン Cチーム",
     result: "ベスト4/特別賞受賞",
-    createdAt: 2024,
-  },
-  {
-    name: "Astarium",
-    image: "/assets/robots/2024-a-astarium.png",
-    description: "2024NHKロボコン Aチーム",
-    result: "地区大会特別賞受賞",
     createdAt: 2024,
   },
 ];
