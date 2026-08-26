@@ -174,6 +174,8 @@ const robots: Robot[] = [
     description: "2025NHKロボコン Bチーム",
     resuli: "地区大会技術賞/全国大会出場",
     createdAt: 2025,
+    links: {
+      PV: "https://youtu.be/lZW2xDpCR1E",
   },
   {
     name: "鵥",
