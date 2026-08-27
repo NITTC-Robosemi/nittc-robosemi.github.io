@@ -34,137 +34,254 @@ const robots: Robot[] = [
   },
   {
     name: "Libra",
+    image: "/assets/robots/2003-a-Libra.jpg",
     description: "2003NHKロボコン Aチーム",
     result:"地区大会ベスト4/全国大会出場",
     createdAt: 2003,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2003",
+    },
   },
   {
     name: "ん",
+    image: "/assets/robots/2003-b-n.jpg",
     description: "2003NHKロボコン Bチーム",
     createdAt: 2003,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2003",
+    },
   },
   {
     name: "未確認走行物体",
+    image: "/assets/robots/2004-a-mikakuninsoukoubuttai.jpg",
     description: "2004NHKロボコン Aチーム",
     result:"地区大会ベスト4・技術賞/全国大会出場",
     createdAt: 2004,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2004",
+    },
   },
   {
     name: "運び屋",
+    image: "/assets/robots/2004-b-hakobiya.jpg",
     description: "2004NHKロボコン Bチーム",
     createdAt: 2004,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2004",
+    },
   },
   {
     name: "縦高無尽",
+    image: "/assets/robots/2005-a-zyuukoumuzin.jpg",
     description: "2005NHKロボコン Aチーム",
     result:"地区大会優勝/全国大会準優勝・ロボコン大賞",
     createdAt: 2005,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2005",
+    },
   },
   {
     name: "ロボッテ",
+    image: "/assets/robots/2005-b-robotte.jpg",
     description: "2005NHKロボコン Bチーム",
     createdAt: 2005,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2005",
+    },
   },
   {
     name: "雷門兄弟",
+    image: "/assets/robots/2006-a-raimonkyoudai.jpg",
     description: "2006NHKロボコン Aチーム",
     result:"地区大会特別賞受賞/全国大会出場",
     createdAt: 2006,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2006",
+    },
   },
   {
     name: "我々高尾",
     description: "2006NHKロボコン Bチーム",
     createdAt: 2006,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2006",
+    },
   },
   {
     name: "旗掃天外",
+    image: "/assets/robots/2007-a-kisoutengai.jpg",
     description: "2007NHKロボコン Aチーム",
     createdAt: 2007,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2007",
+    },
   },
   {
     name: "UP",
+    image: "/assets/robots/2007-b-UP.jpg",
     description: "2007NHKロボコン Bチーム",
     createdAt: 2007,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2007",
+    },
   },
   {
     name: "我々高尾リターンズ",
+    image: "/assets/robots/2008-a-warewaretakaore.jpg",
     description: "2008NHKロボコン Aチーム",
     result:"地区大会ベスト4",
     createdAt: 2008,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2008",
+    },
   },
   {
     name: "猿走高飛",
     description: "2008NHKロボコン Bチーム",
     result:"地区大会アイデア賞/全国大会出場",
     createdAt: 2008,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2008",
+    },
   },
   {
     name: "宙犬八公",
+    image: "/assets/robots/2009-a-tyukenhatikou.jpg",
     description: "2009NHKロボコン Aチーム",
     createdAt: 2009,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2009",
+    },
   },
   {
     name: "Stand by Milk",
+    image: "/assets/robots/2009-b-standbymilk.jpg",
     description: "2009NHKロボコン Bチーム",
     result:"地区大会ベスト4/ベストカップル賞",
     createdAt: 2009,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2009",
+    },
   },
   {
     name: "走快妖怪",
+    image: "/assets/robots/2010-a-soukaiyoukai.jpg",
     description: "2010NHKロボコン Aチーム",
     result:"地区大会特別賞受賞",
     createdAt: 2010,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2010",
+    },
   },
   {
     name: "狭間怪力",
     description: "2010NHKロボコン Bチーム",
     result:"地区大会デザイン賞/全国大会出場",
     createdAt: 2010,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2010",
+    },
   },
   {
     name: "175リッター",
+    image: "/assets/robots/2011-a-inagoritta.jpg",
     description: "2011NHKロボコン Aチーム",
     result:"地区大会セーフティーデザイン賞",
     createdAt: 2011,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2011",
+    },
   },
   {
     name: "鉄塔兄弟",
+    image: "/assets/robots/2011-b-tettoukyoudai.jpg",
     description: "2011NHKロボコン Bチーム",
     result:"地区大会デザイン賞/全国大会出場",
     createdAt: 2011,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2011",
+    },
   },
   {
     name: "NONA",
+    image: "/assets/robots/2012-a-NONA.jpg",
     description: "2012NHKロボコン Aチーム",
     createdAt: 2012,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2012",
+    },
   },
   {
     name: "意気羊々",
+    image: "/assets/robots/2012-b-ikiyouyou.jpg",
     description: "2012NHKロボコン Bチーム",
     result:"地区大会デザイン賞",
     createdAt: 2012,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2012",
+    },
   },
   {
     name: "Cirque du 高尾",
+    image: "/assets/robots/2013-a-cirquedutakao.jpg",
     description: "2013NHKロボコン Aチーム",
     createdAt: 2013,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2013",
+    },
   },
   {
     name: "点灯夢志",
+    image: "/assets/robots/2013-b-tentoumusi.jpg",
     description: "2013NHKロボコン Bチーム",
     createdAt: 2013,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2013",
+    },
   },
   {
     name: "とろろニクス",
+    image: "/assets/robots/2014-a-tororonikusu.jpg",
     description: "2014NHKロボコン Aチーム",
     result:"地区大会ベスト4",
     createdAt: 2014,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2014",
+    },
   },
   {
     name: "そばな・そばを",
+    image: "/assets/robots/2014-b-sobanaandsobawo.jpg",
     description: "2014NHKロボコン Bチーム",
     result:"地区大会準優勝/全国大会出場",
     createdAt: 2014,
+    links: {
+      旧サイトで見る:
+        "https://sites.google.com/view/nittc-robocon/nhk-records/2014",
+    },
   },
   {
     name: "沼のかばさん",
