@@ -11,6 +11,197 @@ type Robot = {
 };
 const robots: Robot[] = [
   {
+    createdAt: "東京高専ロボコンゼミ発足",
+  },
+  {
+    name: "BigM型Wing",
+    description: "2001NHKロボコン Aチーム",
+    result:"地区大会ベスト4・技術賞/全国大会出場",
+    createdAt: 2001,
+  },
+  {
+    name: "ネットウ高志炎",
+    description: "2001NHKロボコン Bチーム",
+    createdAt: 2001,
+  },
+  {
+    name: "侍",
+    description: "2002NHKロボコン Aチーム",
+    result:"地区大会特別賞受賞",
+    createdAt: 2002,
+  },
+  {
+    name: "デルタワー",
+    description: "2002NHKロボコン Bチーム",
+    createdAt: 2002,
+  },
+  {
+    name: "Libra",
+    description: "2003NHKロボコン Aチーム",
+    result:"地区大会ベスト4/全国大会出場",
+    createdAt: 2003,
+  },
+  {
+    name: "ん",
+    description: "2003NHKロボコン Bチーム",
+    createdAt: 2003,
+  },
+  {
+    name: "未確認走行物体",
+    description: "2004NHKロボコン Aチーム",
+    result:"地区大会ベスト4・技術賞/全国大会出場",
+    createdAt: 2004,
+  },
+  {
+    name: "運び屋",
+    description: "2004NHKロボコン Bチーム",
+    createdAt: 2004,
+  },
+  {
+    name: "縦高無尽",
+    description: "2005NHKロボコン Aチーム",
+    result:"地区大会優勝/全国大会準優勝・ロボコン大賞",
+    createdAt: 2005,
+  },
+  {
+    name: "ロボッテ",
+    description: "2005NHKロボコン Bチーム",
+    createdAt: 2005,
+  },
+  {
+    name: "雷門兄弟",
+    description: "2006NHKロボコン Aチーム",
+    result:"地区大会特別賞受賞/全国大会出場",
+    createdAt: 2006,
+  },
+  {
+    name: "我々高尾",
+    description: "2006NHKロボコン Bチーム",
+    createdAt: 2006,
+  },
+  {
+    name: "旗掃天外",
+    description: "2007NHKロボコン Aチーム",
+    createdAt: 2007,
+  },
+  {
+    name: "UP",
+    description: "2007NHKロボコン Bチーム",
+    createdAt: 2007,
+  },
+  {
+    name: "我々高尾リターンズ",
+    description: "2008NHKロボコン Aチーム",
+    result:"地区大会ベスト4",
+    createdAt: 2008,
+  },
+  {
+    name: "猿走高飛",
+    description: "2008NHKロボコン Bチーム",
+    result:"地区大会アイデア賞/全国大会出場",
+    createdAt: 2008,
+  },
+  {
+    name: "宙犬八公",
+    description: "2009NHKロボコン Aチーム",
+    createdAt: 2009,
+  },
+  {
+    name: "Stand by Milk",
+    description: "2009NHKロボコン Bチーム",
+    result:"地区大会ベスト4/ベストカップル賞",
+    createdAt: 2009,
+  },
+  {
+    name: "走快妖怪",
+    description: "2010NHKロボコン Aチーム",
+    result:"地区大会特別賞受賞",
+    createdAt: 2010,
+  },
+  {
+    name: "狭間怪力",
+    description: "2010NHKロボコン Bチーム",
+    result:"地区大会デザイン賞/全国大会出場",
+    createdAt: 2010,
+  },
+  {
+    name: "175リッター",
+    description: "2011NHKロボコン Aチーム",
+    result:"地区大会セーフティーデザイン賞",
+    createdAt: 2011,
+  },
+  {
+    name: "鉄塔兄弟",
+    description: "2011NHKロボコン Bチーム",
+    result:"地区大会デザイン賞/全国大会出場",
+    createdAt: 2011,
+  },
+  {
+    name: "NONA",
+    description: "2012NHKロボコン Aチーム",
+    createdAt: 2012,
+  },
+  {
+    name: "意気羊々",
+    description: "2012NHKロボコン Bチーム",
+    result:"地区大会デザイン賞",
+    createdAt: 2012,
+  },
+  {
+    name: "Cirque du 高尾",
+    description: "2013NHKロボコン Aチーム",
+    createdAt: 2013,
+  },
+  {
+    name: "点灯夢志",
+    description: "2013NHKロボコン Bチーム",
+    createdAt: 2013,
+  },
+  {
+    name: "とろろニクス",
+    description: "2014NHKロボコン Aチーム",
+    result:"地区大会ベスト4",
+    createdAt: 2014,
+  },
+  {
+    name: "そばな・そばを",
+    description: "2014NHKロボコン Bチーム",
+    result:"地区大会準優勝/全国大会出場",
+    createdAt: 2014,
+  },
+  {
+    name: "沼のかばさん",
+    description: "2015NHKロボコン Aチーム",
+    createdAt: 2015,
+  },
+  {
+    name: "゜ゑ",
+    description: "2015NHKロボコン Bチーム",
+    result:"地区大会特別賞受賞",
+    createdAt: 2015,
+  },
+  {
+    name: "Tmitter",
+    description: "2016NHKロボコン Aチーム",
+    createdAt: 2016,
+  },
+  {
+    name: "Δt",
+    description: "2016NHKロボコン Bチーム",
+    createdAt: 2016,
+  },
+  {
+    name: "狭間",
+    description: "2017NHKロボコン Aチーム",
+    result: "地区大会特別賞受賞",
+    createdAt: 2017,
+  },
+  {
+    name: "Bee'z",
+    description: "2017NHKロボコン Bチーム",
+    createdAt: 2017,
+  },
+  {
     name: "Strelitzia",
     image: "/assets/robots/2018-a-strelitzia.webp",
     description: "2018NHKロボコン Aチーム",
