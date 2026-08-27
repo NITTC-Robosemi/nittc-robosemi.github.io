@@ -198,6 +198,19 @@ const robots: Robot[] = [
     result: "特別賞受賞",
     createdAt: 2025,
   },
+  {
+    name: "守鴨",
+    image: "/assets/robots/2026-kou-a-syugamo.jpg",
+    description: "2026交流ロボコン Aチーム",
+    createdAt: 2026,
+  },
+  {
+    name: "猟豹",
+    image: "/assets/robots/2026-kou-b-ryohyo.jpg",
+    description: "2026交流ロボコン Bチーム",
+    result: "交ロボ大賞",
+    createdAt: 2026,
+  },
 ];
 const robotsYearGrouped = robots.reduce((acc, robot) => {
   acc.set(robot.createdAt, [...(acc.get(robot.createdAt) ?? []), robot]);
