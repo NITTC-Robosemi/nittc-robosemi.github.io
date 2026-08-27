@@ -11,7 +11,7 @@ type Robot = {
 };
 const robots: Robot[] = [
   {
-    createdAt: "東京高専ロボコンゼミ発足",
+    createdAt: "ゼミ発足",
   },
   {
     name: "BigM型Wing",
