@@ -11,9 +11,6 @@ type Robot = {
 };
 const robots: Robot[] = [
   {
-    createdAt: "ゼミ発足",
-  },
-  {
     name: "BigM型Wing",
     description: "2001NHKロボコン Aチーム",
     result:"地区大会ベスト4・技術賞/全国大会出場",
