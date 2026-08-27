@@ -208,7 +208,7 @@ const robots: Robot[] = [
     name: "猟豹",
     image: "/assets/robots/2026-kou-b-ryohyo.jpg",
     description: "2026交流ロボコン Bチーム",
-    result: "交ロボ大賞",
+    result: "交ロボ大賞/予選にて大会最速Vゴール",
     createdAt: 2026,
   },
 ];
